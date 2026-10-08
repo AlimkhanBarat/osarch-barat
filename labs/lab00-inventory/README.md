@@ -9,7 +9,7 @@ Date:08.10.2026
 Steps, with commands in code blocks. Not prose about the steps.
 
 ```
-systeminfo>
+systeminfo
 wmic cpu get Name, NumberOfCores, NumberOfLogicalProcessors
 wmic memorychip get DeviceLocator, Capacity, Speed
 powershell -Command "Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType; Get-Volume C | Select-Object DriveLetter, @{Name='Free_GB';Expression={[math]::round($_.SizeRemaining/1GB,1)}}, @{Name='Total_GB';Expression={[math]::round($_.Size/1GB,1)}}"
@@ -26,8 +26,8 @@ wmic bios get SMBIOSBIOSVersion, ReleaseDate
 
 At least one thing. What I saw, what it turned out to be, what I did about it.
 1) Confusion of github interface and organizing github repository
-    - What I saw : When I looked at beginning page of my repository, I did not know how to upload my screenshots on my github correctly
-    - What it turned out to be : Turned out that I needed to download "repo_starter.zip" from canvas and simply upload it into my repository. Then, I needed to open my repository by clicking on it and start working. 
+    - What I saw : When I looked at beginning page of my repository, I did not know how to upload my screenshots(lab 0) on my github correctly
+    - What it turned out to be : Turned out that I needed to download "repo_starter.zip" from canvas and simply upload it into my repository. Then, I needed to open my repository by clicking on it and start working there. 
     - What I did about it : It allowed me to correctly organize my works, upload my lab 0 and write description for lab 0.
 
 ## Evidence

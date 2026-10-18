@@ -1,7 +1,7 @@
 # Lab 1 — Your first virtual machine
 
 Pair:                     Driver first half:
-Machine: ASUS Vivobook S 16 M3607HA | Guest : Guest: Ubuntu Server 24.04.1 LTS
+Machine: ASUS Vivobook S 16 M3607HA | Guest: Ubuntu Server 24.04.1 LTS
 Date: 
 
 Hypervisor: VMware Workstation Pro (Free Personal Use) - https://support.broadcom.com/web/ecx/home 

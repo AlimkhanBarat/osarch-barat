@@ -6,25 +6,31 @@ Date:08.10.2026
 
 ## What I did
 
-Steps, with commands in code blocks. Not prose about the steps.
-
-```
-systeminfo
-wmic cpu get Name, NumberOfCores, NumberOfLogicalProcessors
+```cmd
+wmic cpu get Name, NumberOfCores, NumberOfLogicalProcessors, VirtualizationFirmwareEnabled
 wmic memorychip get DeviceLocator, Capacity, Speed
-powershell -Command "Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType; Get-Volume C | Select-Object DriveLetter, @{Name='Free_GB';Expression={[math]::round($_.SizeRemaining/1GB,1)}}, @{Name='Total_GB';Expression={[math]::round($_.Size/1GB,1)}}"
-bcdedit | findstr /i "path"
-wmic cpu get VirtualizationFirmwareEnabled
+powershell -Command "Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType"
 wmic logicaldisk where "DeviceID='C:'" get FreeSpace, Size
 wmic bios get SMBIOSBIOSVersion, ReleaseDate
+bcdedit | findstr /i "path" ```
 
-```
 
 ## Result
 
-## What did not work the first time
+| What | Value | Where I got it |
+| :--- | :--- | :--- |
+| CPU Model | AMD Ryzen 7 260 w/ Radeon 780M Graphics | `wmic cpu get Name` |
+| CPU Cores / Threads | 8 Cores, 16 Logical Processors | `wmic cpu get NumberOfCores, NumberOfLogicalProcessors` |
+| Total Memory & Modules |16 GB (2 modules x 8 GB)| `wmic memorychip get DeviceLocator, Capacity` |
+| Memory Speed | 5600 MT/s | `wmic memorychip get Speed` |
+| Disk Model & Type | | `powershell -Command "Get-PhysicalDisk \| Select-Object FriendlyName, MediaType, BusType"` |
+| Free Space on Volume C: |417713221632| `wmic logicaldisk where "DeviceID='C:'" get FreeSpace, Size` |
+| Firmware Type |UEFI (proven by \Windows\system32\winload.efi) | `bcdedit \| findstr /i "path"` |
+| Firmware Version & Date | Date : 20260327000000.000000+000, Version : M3607HA.317| `wmic bios get SMBIOSBIOSVersion, ReleaseDate` |
+| Hardware Virtualization |Enabled (`TRUE`)| `wmic cpu get VirtualizationFirmwareEnabled` |
 
-At least one thing. What I saw, what it turned out to be, what I did about it.
+
+## What did not work the first time
 1) Confusion of github interface and organizing github repository
     - What I saw : When I looked at beginning page of my repository, I did not know how to upload my screenshots(lab 0) on my github correctly
     - What it turned out to be : Turned out that I needed to download "repo_starter.zip" from canvas and simply upload it into my repository. Then, I needed to open my repository by clicking on it and start working there. 
@@ -32,5 +38,8 @@ At least one thing. What I saw, what it turned out to be, what I did about it.
 
 ## Evidence
 
-- [evidence/systeminfo.png](evidence/systeminfo.png) — proves general information regarding system 
-- [evidence/hardware_commands.png](evidence/hardware_commands.png) — proves hardware characteristics of the laptop
+evidence/cpu.txt - proves CPU model, core/thread count, virtualization status, and UEFI/BIOS firmware details
+
+evidence/memory.txt - proves installed RAM modules, capacity, and speed
+
+evidence/disk.txt - proves physical disk model, bus type (NVMe), and free space on volume C

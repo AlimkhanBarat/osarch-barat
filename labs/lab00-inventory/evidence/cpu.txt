@@ -1,0 +1,17 @@
+C:\Windows\System32>wmic cpu get Name, NumberOfCores, NumberOfLogicalProcessors, VirtualizationFirmwareEnabled
+Name                                     NumberOfCores  NumberOfLogicalProcessors  VirtualizationFirmwareEnabled
+AMD Ryzen 7 260 w/ Radeon 780M Graphics  8              16                         TRUE
+
+
+C:\Windows\System32>wmic bios get SMBIOSBIOSVersion, ReleaseDate
+ReleaseDate                SMBIOSBIOSVersion
+20260327000000.000000+000  M3607HA.317
+
+
+C:\Windows\System32>bcdedit | findstr /i "path"
+path                    \EFI\Microsoft\Boot\bootmgfw.efi
+path                    \Windows\system32\winload.efi
+
+C:\Windows\System32>wmic cpu get VirtualizationFirmwareEnabled
+VirtualizationFirmwareEnabled
+TRUE

@@ -1,0 +1,10 @@
+C:\Windows\System32>powershell -Command "Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType"
+
+FriendlyName            MediaType BusType
+------------            --------- -------
+MTFDKBA512QGN-1BN1AABGA SSD       NVMe
+
+
+C:\Windows\System32>wmic logicaldisk where "DeviceID='C:'" get FreeSpace, Size
+FreeSpace     Size
+417713221632  511078035456

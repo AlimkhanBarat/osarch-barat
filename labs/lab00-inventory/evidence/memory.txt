@@ -1,0 +1,3 @@
+C:\Windows\System32>wmic memorychip get DeviceLocator, Capacity, Speed
+Capacity     DeviceLocator  Speed
+17179869184  DIMM 0         5600

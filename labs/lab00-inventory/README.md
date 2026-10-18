@@ -21,7 +21,7 @@ bcdedit | findstr /i "path"
 | CPU Cores / Threads |8 Cores, 16 Logical Processors|`wmic cpu get NumberOfCores,NumberOfLogicalProcessors` |
 | Total Memory & Modules |16 GB (2 modules x 8 GB)| `wmic memorychip get DeviceLocator, Capacity` |
 | Memory Speed | 5600 MT/s | `wmic memorychip get Speed` |
-| Disk Model & Type|`powershell -Command "Get-PhysicalDisk \|Select-Object FriendlyName, MediaType,BusType"` |
+| Disk Model & Type|Model : MTFDKBA512QGN-1BN1AABGA, Type : SSD|`powershell -Command "Get-PhysicalDisk \|Select-Object FriendlyName, MediaType,BusType"` |
 | Free Space on Volume C: |417713221632| `wmic logicaldisk where "DeviceID='C:'" get FreeSpace, Size` |
 | Firmware Type |UEFI (proven by \Windows\system32\winload.efi) | `bcdedit \| findstr /i "path"` |
 | Firmware Version & Date|Date:27.03.2026,Version:M3607HA.317|`wmic bios get SMBIOSBIOSVersion, ReleaseDate` |
@@ -36,8 +36,6 @@ bcdedit | findstr /i "path"
 
 ## Evidence
 
-evidence/cpu.txt - proves CPU model, core/thread count, virtualization status, and UEFI/BIOS firmware details
-
-evidence/memory.txt - proves installed RAM modules, capacity, and speed
-
-evidence/disk.txt - proves physical disk model, bus type (NVMe), and free space on volume C
+- [evidence/cpu.txt](evidence/cpu.txt) - proves CPU model, core/thread count, virtualization status, and UEFI/BIOS firmware details
+- [evidence/memory.txt](evidence/memory.txt) - proves installed RAM modules, capacity, and speed
+- [evidence/disk.txt](evidence/disk.txt) - proves physical disk model, bus type (NVMe), and free space on volume C

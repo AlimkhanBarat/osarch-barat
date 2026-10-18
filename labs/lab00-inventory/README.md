@@ -12,7 +12,7 @@ wmic memorychip get DeviceLocator, Capacity, Speed
 powershell -Command "Get-PhysicalDisk | Select-Object FriendlyName, MediaType, BusType"
 wmic logicaldisk where "DeviceID='C:'" get FreeSpace, Size
 wmic bios get SMBIOSBIOSVersion, ReleaseDate
-bcdedit | findstr /i "path" ```
+bcdedit | findstr /i "path" 
 
 
 ## Result

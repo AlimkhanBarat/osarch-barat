@@ -13,6 +13,7 @@ powershell -Command "Get-PhysicalDisk | Select-Object FriendlyName, MediaType, B
 wmic logicaldisk where "DeviceID='C:'" get FreeSpace, Size
 wmic bios get SMBIOSBIOSVersion, ReleaseDate
 bcdedit | findstr /i "path" 
+```
 
 ## Result
 

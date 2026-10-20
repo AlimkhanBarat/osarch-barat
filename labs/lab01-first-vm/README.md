@@ -30,7 +30,7 @@ vCPU : 2. Justification : My AMD Ryzen 7 processor has 8 physical cores. Giving 
 
 Memory : 4GB. Justification : I allocated 4 GB of my 16 GB because Windows already leverages about 6 GB when idle, and I need room for a Windows guest in Lab 2.
 
-Disk : 25GB. Justification : Allocating a 25 GB dynamic virtual disk uses only 3-4 GB today and will never exceed 6% of my available host drive space, making it completely safe for the host OS.
+Disk : 25GB. Justification : Allocating a 25 GB dynamic virtual disk uses only 3-4 GB today and making it completely safe for the host OS.
 
 Network : NAT. Justification : NAT acts as a virtual firewall, hiding your virtual machine from other devices on the local classroom Wi-Fi network while still giving it full outbound internet access.
 

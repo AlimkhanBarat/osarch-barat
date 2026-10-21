@@ -37,10 +37,10 @@ Network : NAT. Justification : NAT acts as a virtual firewall, hiding your virtu
 The VM boots; the break-and-rollback cycle is shown in the evidence below.
 
 ## What did not work the first time
-1. 
-What I saw : In the step 9 I chose option A to break my VM. I run all the commands but forgot to take a screenshot before and after the commands.
-What it turned out to be : When I realized that I needed to take screenshots I was really confused when exactly to take the since after the last command everything was rebooting. In fact, I needed to take the first screenshot before the last command to show my server name and to demonstrate that there was no such a file or directory after the third screenshot. The second screenshot was required to be taken after running 'sudo reboot' and 'hostname'
-What I did : So, when I understood my mistake, I took the following screenshots the right way. 
+
+- What I saw : In the step 9 I chose option A to break my VM. I run all the commands but forgot to take a screenshot before and after the commands.
+- What it turned out to be : When I realized that I needed to take screenshots I was really confused when exactly to take the since after the last command everything was rebooting. In fact, I needed to take the first screenshot before the last command to show my server name and to demonstrate that there was no such a file or directory after the third screenshot. The second screenshot was required to be taken after running 'sudo reboot' and 'hostname'
+- What I did : So, when I understood my mistake, I took the following screenshots the right way. 
 
 
 ## Evidence

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6988c0a9a28af2a7d1302f0298d242f3dee8d911
 Windows IP Configuration
 
 
@@ -8,4 +11,8 @@ Ethernet adapter Ethernet0:
    Link-local IPv6 Address . . . . . : fe80::b29e:cb1e:db48:67f3%5
    IPv4 Address. . . . . . . . . . . : 192.168.165.130
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
+<<<<<<< HEAD
    Default Gateway . . . . . . . . . : 192.168.165.2
+=======
+   Default Gateway . . . . . . . . . : 192.168.165.2
+>>>>>>> 6988c0a9a28af2a7d1302f0298d242f3dee8d911

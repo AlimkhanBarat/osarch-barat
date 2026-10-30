@@ -31,7 +31,7 @@ My host machine (ASUS Vivobook) has 16 GB of RAM and a 512 GB SSD.
 | Disk Allocation | Pre-allocated | Thin provisioned | A dynamically allocated disk only consumes physical space as it fills up, saving crucial space on the 512 GB host SSD. |
 
 **What went wrong and how I fixed it:**
-During network testing, I could not ping the Windows guest from the Linux guest, receiving 100% packet loss. I realized the Windows Defender Firewall was blocking ICMPv4 requests by default. Instead of disabling the firewall completely—which is a security risk—I opened "Windows Defender Firewall with Advanced Security" and explicitly enabled the inbound rule `File and Printer Sharing (Echo Request - ICMPv4-In)`. The ping then succeeded.
+During network testing, I could not ping the Windows guest from the Linux guest, receiving 100% packet loss. I realized the Windows Defender Firewall was blocking ICMPv4 requests by default. Instead of disabling the firewall completely-which is a security risk-I opened "Windows Defender Firewall with Advanced Security" and explicitly enabled the inbound rule `File and Printer Sharing (Echo Request - ICMPv4-In)`. The ping then succeeded.
 
 ## 4. Evidence
 - [evidence/01-new-vm-wizard.png](evidence/01-new-vm-wizard.png) - shows the hypervisor's new-VM wizard with my CPU and RAM choices.
@@ -41,10 +41,8 @@ During network testing, I could not ping the Windows guest from the Linux guest,
 - [evidence/05-ping-between-guests.txt](evidence/05-ping-between-guests.txt) - proves connectivity: Linux to Windows, Windows to Linux, and each guest to the internet.
 - [evidence/06-snapshot-list.png](evidence/06-snapshot-list.png) - shows the snapshot manager with the clean snapshot ready for rollback.
 
-
 ## 5. What I would do differently
-Next time, I would automate the Ubuntu Server installation using a `cloud-init` configuration file rather than doing it interactively. Manually clicking through the OS installer takes time and is prone to human error, which goes against the goal of allowing Aigerim to "do the next one myself" easily.
-
+Next time, I would allocate 6 GB of RAM to the Windows 11 guest from the very beginning. I initially started with 4 GB, but the evaluation OS lagged significantly and was unresponsive during the setup. Anticipating this and giving it 6 GB immediately would save time and make the configuration process much smoother.
 
 ## AI Usage Declaration
 

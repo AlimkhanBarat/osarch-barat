@@ -1,0 +1,51 @@
+C:\Users\Alimkhan>ping 192.168.165.129
+
+Pinging 192.168.165.129 with 32 bytes of data:
+Reply from 192.168.165.129: bytes=32 time=1ms TTL=64
+Reply from 192.168.165.129: bytes=32 time=1ms TTL=64
+Reply from 192.168.165.129: bytes=32 time<1ms TTL=64
+Reply from 192.168.165.129: bytes=32 time<1ms TTL=64
+
+Ping statistics for 192.168.165.129:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+
+
+C:\Users\Alimkhan>ping 8.8.8.8
+
+Pinging 8.8.8.8 with 32 bytes of data:
+Reply from 8.8.8.8: bytes=32 time=257ms TTL=128
+Reply from 8.8.8.8: bytes=32 time=266ms TTL=128
+Reply from 8.8.8.8: bytes=32 time=176ms TTL=128
+Reply from 8.8.8.8: bytes=32 time=149ms TTL=128
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 149ms, Maximum = 266ms, Average = 212ms
+
+
+barat@lab01-barat:~$ping -c 4 192.168.165.130
+PING 192.168.165.130 (192.168.165.130) 56(84) bytes of data.
+64 bytes from 192.168.165.130: icmp_seq=1 ttl=128 time=2.33 ms
+64 bytes from 192.168.165.130: icmp_seq=2 ttl=128 time=1.27 ms
+64 bytes from 192.168.165.130: icmp_seq=3 ttl=128 time=0.916 ms
+64 bytes from 192.168.165.130: icmp_seq=4 ttl=128 time=0.804 ms
+
+--- 192.168.165.130 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3007ms
+rtt min/avg/max/mdev = 0.804/1.329/2.330/0.602 ms
+
+
+barat@lab01-barat:~$ ping -c 4 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=128 time=135 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=128 time=260 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=128 time=180 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=128 time=201 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+rtt min/avg/max/mdev = 135.268/193.977/259.576/44.757 ms

@@ -1,4 +1,4 @@
-# Ticket 1 — New developer starts Monday, needs a test machine
+# Ticket 1 - New developer starts Monday, needs a test machine
 
 ## 1. What was asked
 "Hi, we have someone starting on Monday and he needs a test computer set up. Nothing special, just so he can try things without breaking anything. Can you write down how to do it so I can do the next one myself? Thanks"
@@ -34,12 +34,20 @@ My host machine (ASUS Vivobook) has 16 GB of RAM and a 512 GB SSD.
 During network testing, I could not ping the Windows guest from the Linux guest, receiving 100% packet loss. I realized the Windows Defender Firewall was blocking ICMPv4 requests by default. Instead of disabling the firewall completely—which is a security risk—I opened "Windows Defender Firewall with Advanced Security" and explicitly enabled the inbound rule `File and Printer Sharing (Echo Request - ICMPv4-In)`. The ping then succeeded.
 
 ## 4. Evidence
-- [evidence/01-new-vm-wizard.png](evidence/01-new-vm-wizard.png) — shows the hypervisor's new-VM wizard with my CPU and RAM choices.
-- [evidence/02-disk-settings.png](evidence/02-disk-settings.png) — proves the disk type is dynamically allocated (thin provisioned).
-- [evidence/03-network-adapter.png](evidence/03-network-adapter.png) — shows the network mode set to NAT to bypass MAC filtering.
-- [evidence/04-guest-uname.txt](evidence/04-guest-uname.txt) — shows the output of `uname -a` and `lsb_release -a` inside the Linux guest.
-- [evidence/05-ping-between-guests.txt](evidence/05-ping-between-guests.txt) — proves connectivity: Linux to Windows, Windows to Linux, and each guest to the internet.
-- [evidence/06-snapshot-list.png](evidence/06-snapshot-list.png) — shows the snapshot manager with the clean snapshot ready for rollback.
+- [evidence/01-new-vm-wizard.png](evidence/01-new-vm-wizard.png) - shows the hypervisor's new-VM wizard with my CPU and RAM choices.
+- [evidence/02-disk-settings.png](evidence/02-disk-settings.png) - proves the disk type is dynamically allocated (thin provisioned).
+- [evidence/03-network-adapter.png](evidence/03-network-adapter.png) - shows the network mode set to NAT to bypass MAC filtering.
+- [evidence/04-guest-uname.txt](evidence/04-guest-uname.txt) - shows the output of `uname -a` and `lsb_release -a` inside the Linux guest.
+- [evidence/05-ping-between-guests.txt](evidence/05-ping-between-guests.txt) - proves connectivity: Linux to Windows, Windows to Linux, and each guest to the internet.
+- [evidence/06-snapshot-list.png](evidence/06-snapshot-list.png) - shows the snapshot manager with the clean snapshot ready for rollback.
+
 
 ## 5. What I would do differently
 Next time, I would automate the Ubuntu Server installation using a `cloud-init` configuration file rather than doing it interactively. Manually clicking through the OS installer takes time and is prone to human error, which goes against the goal of allowing Aigerim to "do the next one myself" easily.
+
+
+## AI Usage Declaration
+
+| Assignment | AI Tool | Purpose |
+| :--- | :--- | :--- |
+| Ticket 1 | Gemini / ChatGPT | Used to clarify the assignment instructions in the step-by-step guide, refine the explanations in BUILD.md for non-technical users, and self-check the logic and completeness of the report. |

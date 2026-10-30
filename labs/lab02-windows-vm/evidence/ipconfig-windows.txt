@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 6988c0a9a28af2a7d1302f0298d242f3dee8d911
 Windows IP Configuration
 
 

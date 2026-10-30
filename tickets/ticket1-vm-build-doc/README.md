@@ -48,4 +48,4 @@ Next time, I would allocate 6 GB of RAM to the Windows 11 guest from the very be
 
 | Assignment | AI Tool | Purpose |
 | :--- | :--- | :--- |
-| Ticket 1 | Gemini / ChatGPT | Used to clarify the assignment instructions in the step-by-step guide, refine the explanations in BUILD.md for non-technical users, and self-check the logic and completeness of the report. |
+| Ticket 1 | Gemini | Used to clarify the assignment instructions in the step-by-step guide, refine the explanations in BUILD.md for non-technical users, and self-check the logic and completeness of the report. |

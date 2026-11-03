@@ -1,5 +1,5 @@
 # tldr - extracting an archive without reading eight screens of prose
-**Presented:** week 5, Alimkhan Barat / Damir Niyazbek
+**Presented:** week 6, Alimkhan Barat / Damir Niyazbek
 
 ## The problem
 The built-in `man` pages are overwhelmingly long and detailed. Finding the correct combination of flags for a simple, everyday task (like extracting an archive) requires reading through pages of dense technical prose. We proved this live by running `man tar | wc -l`, which outputs over a thousand lines.

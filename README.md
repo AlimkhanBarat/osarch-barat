@@ -36,7 +36,7 @@
 
 ## Tool of the Week
 
-Week __ — `____` : [tools/____.md](tools/)
+Week 6 — `tldr` : [tools/tldr.md](tools/)
 
 ## Use of AI assistants
 

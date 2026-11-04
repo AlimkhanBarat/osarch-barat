@@ -36,7 +36,7 @@
 
 ## Tool of the Week
 
-Week 6 — `tldr` : [tool/tldr.md](tool/)
+Week 6 — `tldr` : [tools/tldr.md](tools/)
 
 ## Use of AI assistants
 

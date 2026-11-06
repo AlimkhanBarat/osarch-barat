@@ -50,6 +50,9 @@ Low-profile CPU air cooler. Connects to: AMD AM4/AM5 motherboard socket mounts a
 |------|--------|----------|
 | Processor | AMD Ryzen 5 7600 | It physically fits into the AM5 socket on the ASUS motherboard. |
 | Motherboard | ASUS PRIME B650M-A | It provides the AM5 socket for the Ryzen processor and DDR5 slots for the memory. | 
+| Memory | Crucial DDR4-3200, 16 GB DIMM | The MSI motherboard specifically requires DDR4 memory and only has DDR4 slots. |
+| SSD | Samsung 870 EVO 1 TB | It connects via a SATA cable to one of the SATA 6Gb/s ports on the MSI motherboard. | 
+| Power Supply | Corsair RM750e (750 W) | It provides the 24-pin and 8-pin power for the MSI motherboard, plus the SATA power cable needed for the Samsung 870 EVO SSD. |
 
 ### Build 2
 | Part | Model | Why it fits here |

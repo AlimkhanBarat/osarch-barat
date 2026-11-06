@@ -54,7 +54,7 @@ Low-profile CPU air cooler. Connects to: AMD AM4/AM5 motherboard socket mounts a
 | Cooler | AMD Wraith Stealth Cooler | It is mechanically compatible with the AM5 socket mounts on the ASUS board and handles the CPU's 65W heat output. | 
 | SSD | Samsung 990 PRO 1 TB | It plugs directly into an available M.2 (PCIe 4.0/5.0) slot on the ASUS motherboard. |
 
-What each build still needs: A power supply unit (ATX), a computer case, a monitor, a keyboard, and a mouse. A dedicated graphics card is not strictly required because the CPU has built-in graphics.
+What this build still needs: A power supply unit (ATX), a computer case, a monitor, a keyboard, and a mouse. A dedicated graphics card is not strictly required because the CPU has built-in graphics.
 
 ### Build 2
 | Part | Model | Why it fits here |

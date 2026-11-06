@@ -50,13 +50,20 @@ Low-profile CPU air cooler. Connects to: AMD AM4/AM5 motherboard socket mounts a
 |------|--------|----------|
 | Processor | AMD Ryzen 5 7600 | It physically fits into the AM5 socket on the ASUS motherboard. |
 | Motherboard | ASUS PRIME B650M-A | It provides the AM5 socket for the Ryzen processor and DDR5 slots for the memory. | 
-| Memory | Crucial DDR4-3200, 16 GB DIMM | The MSI motherboard specifically requires DDR4 memory and only has DDR4 slots. |
-| SSD | Samsung 870 EVO 1 TB | It connects via a SATA cable to one of the SATA 6Gb/s ports on the MSI motherboard. | 
-| Power Supply | Corsair RM750e (750 W) | It provides the 24-pin and 8-pin power for the MSI motherboard, plus the SATA power cable needed for the Samsung 870 EVO SSD. |
+| Memory | Kingston FURY Beast DDR5-5600, 16 GB | This is DDR5 memory, which the Ryzen 7000 series requires and the ASUS motherboard supports. |
+| Cooler | AMD Wraith Stealth Cooler | It is mechanically compatible with the AM5 socket mounts on the ASUS board and handles the CPU's 65W heat output. | 
+| SSD | Samsung 990 PRO 1 TB | It plugs directly into an available M.2 (PCIe 4.0/5.0) slot on the ASUS motherboard. |
+What each build still needs: A power supply unit (ATX), a computer case, a monitor, a keyboard, and a mouse. A dedicated graphics card is not strictly required because the CPU has built-in graphics.
 
 ### Build 2
 | Part | Model | Why it fits here |
-What each build still needs: …
+|------|--------|----------|
+| Processor | Intel Core i5-13400 | It physically fits into the LGA1700 socket on the MSI motherboard. |
+| Motherboard | MSI PRO B760M-A WIFI DDR4 | It provides the LGA1700 socket for the Intel CPU and has DDR4 memory slots, making it incompatible with Build 1's parts. | 
+| Memory | Crucial DDR4-3200, 16 GB DIMM | The MSI motherboard specifically requires DDR4 memory and only has DDR4 slots. |
+| SSD | Samsung 870 EVO 1 TB | It connects via a SATA cable to one of the SATA 6Gb/s ports on the MSI motherboard. | 
+| Power Supply | Corsair RM750e (750 W) | It provides the 24-pin and 8-pin power for the MSI motherboard, plus the SATA power cable needed for the Samsung 870 EVO SSD. |
+What this build still needs : A CPU cooler (compatible with the LGA1700 socket), a computer case, a monitor, a keyboard, and a mouse. A dedicated graphics card is not strictly required because the Intel CPU has built-in graphics.
 
 ## Part 2 — Same facts, three operating systems
 <the table>

@@ -1,6 +1,6 @@
 # Lab 3 — Teardown, and the same machine from the command line
 
-Pair: <name> + <name> · Date: <date>
+Pair: Barat Alimkhan + None · Date: 06.11.2026
 
 ## Part 1 — Ten parts
 
@@ -85,5 +85,5 @@ Windows uses PowerShell objects to check hardware, while Linux uses separate com
 what you saw: I could not copy the output of the commands onmy Ubuntu st step 5.  what it was: It can be explained by the fact that VMware tools were missing. what you did: I used PowerShell on my host machine in order to connect to my ubuntu. Then, I run all the commands there and successfully gained the outputs.
 
 ## Evidence
-- evidence/windows-specs.txt — …
-- evidence/linux-specs.txt — …
+- [evidence/windows-specs.txt](evidence/windows-specs.txt) — outputs of commands on PowerShell on Windows
+- [evidence/linux-specs.txt](evidence/linux-specs.txt) — outputs of commands on Linux 

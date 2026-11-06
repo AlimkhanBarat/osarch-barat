@@ -67,12 +67,22 @@ What each build still needs: A power supply unit (ATX), a computer case, a monit
 
 What this build still needs : A CPU cooler (compatible with the LGA1700 socket), a computer case, a monitor, a keyboard, and a mouse. A dedicated graphics card is not strictly required because the Intel CPU has built-in graphics.
 
-## Part 2 — Same facts, three operating systems
-<the table>
-<2–3 sentences: how the names differ; what the VM showed>
+
+## Part 2 — Same facts, two operating systems
+| Fact | Windows (PowerShell) | Linux | macOS |
+|---|---|---|---|
+| CPU model | `Get-CimInstance Win32_Processor \| Select Name` | `lscpu` | |
+| Cores / threads | `Get-CimInstance Win32_Processor \| Select NumberOfCores, NumberOfLogicalProcessors` | `lscpu` | |
+| Total memory | `Get-CimInstance Win32_PhysicalMemory \| Select Capacity` | `free -h` | |
+| Memory modules and speed | `Get-CimInstance Win32_PhysicalMemory \| Select DeviceLocator, Speed` | `sudo dmidecode -t memory` | |
+| Disk model and type | `Get-PhysicalDisk \| Select FriendlyName, MediaType, BusType` | `lsblk -d -o NAME,MODEL,ROTA,TRAN,SIZE` | |
+| Free space | `Get-Volume C` | `df -h /` | |
+| Architecture (x86-64 / ARM64) | `$env:PROCESSOR_ARCHITECTURE` | `uname -m` | |
+
+Windows uses PowerShell objects to check hardware, while Linux uses separate command-line tools. The hypervisor hides the real hardware, so the Ubuntu VM only sees the virtualized parts you gave it. Because of this, the VM shows a virtual disk (like "VMware Virtual") and cannot see the real physical RAM modules or memory speed.
 
 ## What did not work the first time
-<at least one real thing: what you saw, what it was, what you did>
+what you saw: I could not copy the output of the commands onmy Ubuntu st step 5.  what it was: It can be explained by the fact that VMware tools were missing. what you did: I used PowerShell on my host machine in order to connect to my ubuntu. Then, I run all the commands there and successfully gained the outputs.
 
 ## Evidence
 - evidence/windows-specs.txt — …

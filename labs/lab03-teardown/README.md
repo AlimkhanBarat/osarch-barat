@@ -9,7 +9,7 @@ Pair: <name> + <name> · Date: <date>
 6-core/12-thread desktop processor, 3.8 GHz base clock, 65W TDP, supports PCIe 5.0 and DDR5. Connects to: Motherboard socket AM5. Limit: Fits only AM5 motherboards and strictly requires DDR5 memory; cannot be used with DDR4. — Source: https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html
 
 ### Intel Core i5-13400
-![](evidence/photos/intel core i5-13400.png)
+![](evidence/photos/intel-core-i5-13400.png)
 10-core (6 P-cores + 4 E-cores)/16-thread desktop processor, 65W base power, supports PCIe 5.0. Connects to: Motherboard socket LGA1700. Limit: Fits only LGA1700 motherboards; supports both DDR4 and DDR5, but memory type is strictly limited by the specific motherboard chipset. — Source: https://www.intel.com/content/www/us/en/products/sku/230495/intel-core-i513400-processor-20m-cache-up-to-4-60-ghz/specifications.html
 
 ### ASUS PRIME B650M-A

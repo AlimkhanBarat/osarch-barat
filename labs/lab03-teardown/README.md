@@ -49,6 +49,7 @@ Low-profile CPU air cooler. Connects to: AMD AM4/AM5 motherboard socket mounts a
 | Part | Model | Why it fits here |
 |------|--------|----------|
 | Processor | AMD Ryzen 5 7600 | It physically fits into the AM5 socket on the ASUS motherboard. |
+| Motherboard | ASUS PRIME B650M-A | It provides the AM5 socket for the Ryzen processor and DDR5 slots for the memory. | 
 
 ### Build 2
 | Part | Model | Why it fits here |

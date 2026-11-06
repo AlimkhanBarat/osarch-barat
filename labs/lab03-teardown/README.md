@@ -48,6 +48,8 @@ Low-profile CPU air cooler. Connects to: AMD AM4/AM5 motherboard socket mounts a
 ### Build 1
 | Part | Model | Why it fits here |
 |------|--------|----------|
+| Processor | AMD Ryzen 5 7600 | It physically fits into the AM5 socket on the ASUS motherboard. |
+
 ### Build 2
 | Part | Model | Why it fits here |
 What each build still needs: …

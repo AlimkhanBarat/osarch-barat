@@ -24,6 +24,7 @@ Answers to the Director's Questions:
 1. Which machine to upgrade first: The Web Developer's machine will need an upgrade first, specifically a second SSD and a potential swap to 64 GB of RAM. Local Docker containers, virtual machines scale exponentially. Within 18 months, the 1 TB drive will likely fill up, and running multiple local services will run out the initial 32 GB of memory.
 2. Pre-built vs. Custom: 
 If we purchased equivalent pre-built workstations, the company gains a unified enterprise warranty and saves assembly time. However, we lose significantly on the upgrade path and price. Pre-builts often utilize strange storage configurations (like mixing a tiny 512GB SSD with a slow HDD for the designer) and we lose an opportunity of meaningful future upgrades due to proprietary cases and motherboards. We would have to buy a whole new PC rather than just swapping a part.
+
 | Role | Pre-built Equivalent | Estimated Price (KZT) | Vendor | Date |
 | :--- | :--- | :--- | :--- | :--- |
 | Accountant | HP System Unit (i5-14400 / 16GB / 1TB SSD / Win 11 Pro) | ~644,440 | [Kaspi.kz](https://kaspi.kz/shop/p/hp-b6zd2et-chernyi-161092399/?c=750000000) | 2026-11-10 |

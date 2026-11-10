@@ -26,6 +26,22 @@ What I assumed:
 
 ## 3. What I did
 
+How I went from roles to loads to parts: I analyzed each role's daily workload to identify the hardware bottleneck (CPU single-core performance vs. multi-threading, RAM capacity). I then allocated the 3,000,000 KZT budget asymmetrically. All configurations meet the hard requirements: a minimum of 16 GB RAM, a 1 TB SSD, a licensed operating system, and a monitor. 
+
+The budget: The full reasoning and components are in [builds.md](builds.md), and the exact pricing from a Kazakhstani vendor (White Wind / shop.kz) is detailed in [budget.csv](budget.csv). Total spending came to exactly 2,099,000 KZT, saving the company almost 1 million tenge.
+
+**Answers to the Director's Questions:**
+1. **Which machine to upgrade first:** The Web Developer's machine will need an upgrade first, specifically a second SSD and potentially a jump to 64 GB of RAM. Local Docker containers, virtual machines, and node_modules scale not linearly, but exponentially. Within 18 months, the 1 TB drive will likely fill up, and running multiple local services will utilize the initial 32 GB of memory.
+2. **Pre-built vs. Custom:** If we purchased equivalent pre-built workstations, the company gains a unified enterprise warranty (next-business-day repair) and zero assembly time. However, we lose significantly on the upgrade path and price. Pre-builts utilize proprietary motherboards and weak power supplies, meaning we cannot just change GPU for a better one for the designer. Later, we would have to buy a whole new PC which is also costly. 
+3. **Who will complain first:** The Accountant will complain within the first month, specifically about available screen area. While the CPU and SSD are processing databases really quickly, accounting requires multiple large Excel sheets, banking clients, and 1C simultaneously. A single 24-inch monitor forces constant switching tabs, which becomes a workflow bottleneck despite the fast hardware.
+
+## 4. Evidence
+- `evidence/pcpartpicker-links.md` — contains PCPartPicker lists verifying socket, RAM, and power compatibility for all four builds.
+- `evidence/vendor-quotes/` — contains screenshots from shop.kz with the URL and system date visible, proving the parts are available in Kazakhstan at the listed prices.
+
+## 5. What I would do differently
+Instead of relying strictly on a separate generic office supply budget for peripherals, I would explicitly carve out funds from the 3,000,000 KZT to buy an ergonomic, high-precision mouse (like the Logitech MX Master 3S) for the Designer. Standard cheap office mice cause wrist strain during 8-hour Adobe Illustrator sessions and lack the tracking accuracy required for design work.
+
 ## 4. Evidence
 
 ## 5. What I would do differently

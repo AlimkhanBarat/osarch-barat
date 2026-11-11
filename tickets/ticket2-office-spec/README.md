@@ -1,7 +1,7 @@
-# Ticket 2 — Office hardware specification
+# Ticket 2 - Office hardware specification
 
 ## 1. What was asked
-"We are opening the second office and need four computers — accountant, sales, web developer, designer. Budget 3,000,000 tenge for everything. Everyone says we should just buy the same four machines, is that right? Make sure they last a few years. Monitors included."
+"We are opening the second office and need four computers - accountant, sales, web developer, designer. Budget 3,000,000 tenge for everything. Everyone says we should just buy the same four machines, is that right? Make sure they last a few years. Monitors included."
 
 ## 2. What was actually needed
 **Where the request is wrong:** The director's assumption that four identical machines should be purchased is incorrect. Each of the four roles (accountant, sales, web developer, designer) has a profoundly different workload that creates a different hardware bottleneck. Buying identical machines would result in misallocated funds, leaving the designer with poor graphics performance and the sales manager with inadequate memory for heavy multitasking.
@@ -32,16 +32,16 @@ The budget: The full explanation and components are in `builds.md`, and the exac
 
 | Role | Pre-built Equivalent | Estimated Price (KZT) | Vendor | Date |
 | :--- | :--- | :--- | :--- | :--- |
-| Accountant | HP System Unit (i5-14400 / 16GB / 1TB SSD / Win 11 Pro) | ~644,440 | [Kaspi.kz](https://kaspi.kz/shop/p/hp-b6zd2et-chernyi-161092399/?c=750000000) | 2026-11-10 |
-| Sales Manager | Tehnicom (Ryzen 3 3200G / 32GB / 1TB SSD + 4TB HDD) | ~379,730 | [Kaspi.kz](https://kaspi.kz/shop/p/tehnicom-art51080-belyi-171143183/?c=750000000) | 2026-11-10 |
-| Web Developer | Q7 Gigabyte (i5-12400 / 32GB / 1TB SSD / Win 11) | ~306,693 | [Kaspi.kz](https://satu.kz/p130538752-kompyuter-intel-core.html) | 2026-11-10 |
-| Designer | Tehnicom (i7-12700F / RTX 4060 / 32GB / 512GB SSD + 2TB HDD) | ~766,189 | [Kaspi.kz](https://kaspi.kz/shop/p/tehnicom-i712700f00739-belyi-182714537/?c=750000000) | 2026-11-10 |
+| Accountant | HP System Unit (i5-14400 / 16GB / 1TB SSD / Win 11 Pro) | 644,440 | [Kaspi.kz](https://kaspi.kz/shop/p/hp-b6zd2et-chernyi-161092399/?c=750000000) | 2026-11-11 |
+| Sales Manager | Tehnicom (Ryzen 3 3200G / 32GB / 1TB SSD + 4TB HDD) | 379,730 | [Kaspi.kz](https://kaspi.kz/shop/p/tehnicom-art51080-belyi-171143183/?c=750000000) | 2026-11-11 |
+| Web Developer | Q7 Gigabyte (i5-12400 / 32GB / 1TB SSD / Win 11) | 306,693 | [Kaspi.kz](https://satu.kz/p130538752-kompyuter-intel-core.html) | 2026-11-11 |
+| Designer | Tehnicom (i7-12700F / RTX 4060 / 32GB / 512GB SSD + 2TB HDD) | 766,189 | [Kaspi.kz](https://kaspi.kz/shop/p/tehnicom-i712700f00739-belyi-182714537/?c=750000000) | 2026-11-11 |
 
 3. **Who will complain first:** The Accountant will complain within the first month, specifically about available screen space. While the CPU and NVMe SSD process local databases extremely quickly, accounting requires viewing multiple large Excel sheets, banking clients, and 1C simultaneously. A single 23.8-inch monitor forces frequent tab-switching and window resizing, which becomes a workflow bottleneck despite the fast hardware.
 
 ## 4. Evidence
 - [evidence/pcpartpicker-links.md](evidence/pcpartpicker-links.md) — contains PCPartPicker lists verifying CPU socket, RAM type, M.2 slot, and power wattage compatibility for all four builds. (Note: PCPartPicker is used exclusively for compatibility checks, not pricing).
-- [evidence/vendor-quotes](evidence/vendor-quotes) — contains dated screenshots from Kazakhstani vendors with the URL and system date visible, proving the parts are available in Kazakhstan at the listed prices.
+- [evidence/vendor-quotes](evidence/vendor-quotes) — contains dated screenshots from Kazakhstani vendors with the URL.
 
 ## 5. What I would do differently
 Instead of relying strictly on a separate generic office supply budget for peripherals, I would explicitly allocate funds from the remaining 853,385 KZT to buy a high-precision ergonomic mouse (like the Logitech MX Master 3S) for the Designer. Standard office mice cause wrist strain during long sessions and lack the tracking accuracy required for Adobe Creative Cloud work.

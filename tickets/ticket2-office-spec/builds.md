@@ -5,8 +5,8 @@
 **Total:** 467,386 KZT (budget.csv, rows 2-10)
 
 ### Build 2 - Sales Manager
-**Load:** CRM in a browser, 30–40 tabs, Excel, and four hours of video calls a day, sometimes all at once. 
-**Bottleneck:** Memory, not CPU. Chrome with forty tabs plus an active video call consumes around 11–12 GB of RAM. On a standard 8 GB or 16 GB machine, it risks swapping and hard freezing in the middle of a customer call. 
+**Load:** CRM in a browser, 30-40 tabs, Excel, and four hours of video calls a day, sometimes all at once. 
+**Bottleneck:** Memory, not CPU. Chrome with forty tabs plus an active video call consumes around 11-12 GB of RAM. On a standard 8 GB or 16 GB machine, it risks swapping and hard freezing in the middle of a customer call. 
 **Trade-off:** Took a basic entry-level CPU (Ryzen 3 3200G) instead of a premium one and spent the saved money on upgrading to 32 GB of RAM instead of the baseline 16 GB. Integrated graphics and 4 cores are more than enough to display a CRM, but running out of memory during a sales call is a critical failure. 
 **Total:** 454,662 KZT (budget.csv, rows 11-19)
 

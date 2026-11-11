@@ -40,8 +40,8 @@ The budget: The full explanation and components are in `builds.md`, and the exac
 3. **Who will complain first:** The Accountant will complain within the first month, specifically about available screen space. While the CPU and NVMe SSD process local databases extremely quickly, accounting requires viewing multiple large Excel sheets, banking clients, and 1C simultaneously. A single 23.8-inch monitor forces frequent tab-switching and window resizing, which becomes a workflow bottleneck despite the fast hardware.
 
 ## 4. Evidence
-- `evidence/pcpartpicker-links.md` — contains PCPartPicker lists verifying CPU socket, RAM type, M.2 slot, and power wattage compatibility for all four builds. (Note: PCPartPicker is used exclusively for compatibility checks, not pricing).
-- `evidence/vendor-quotes/` — contains dated screenshots from Kazakhstani vendors with the URL and system date visible, proving the parts are available in Kazakhstan at the listed prices.
+- [evidence/pcpartpicker-links.md](evidence/pcpartpicker-links.md) — contains PCPartPicker lists verifying CPU socket, RAM type, M.2 slot, and power wattage compatibility for all four builds. (Note: PCPartPicker is used exclusively for compatibility checks, not pricing).
+- [evidence/vendor-quotes](evidence/vendor-quotes) — contains dated screenshots from Kazakhstani vendors with the URL and system date visible, proving the parts are available in Kazakhstan at the listed prices.
 
 ## 5. What I would do differently
 Instead of relying strictly on a separate generic office supply budget for peripherals, I would explicitly allocate funds from the remaining 853,385 KZT to buy a high-precision ergonomic mouse (like the Logitech MX Master 3S) for the Designer. Standard office mice cause wrist strain during long sessions and lack the tracking accuracy required for Adobe Creative Cloud work.

@@ -42,7 +42,7 @@ Week 6 — `tldr` : [tools/tldr.md](tools/)
 
 | Assignment | Tool | What for |
 |------------|------|----------|
-| | | |
+|Ticket 2 |Gemini |To clarify the assignment steps and requirements. To review and proofread my README.md, builds.md, and budget.csv files. To double-check my logic and find any errors before submitting.|
 
 > Declaring this costs nothing. Not declaring it, when it comes up at the
 > defence, costs the assignment.

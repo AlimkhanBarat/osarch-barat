@@ -38,13 +38,11 @@ sr0                        2.7G rom   iso9660
 <the commands, in order, in code blocks — create, fail, rebuild>
 
 ## Three states
-
 | State | What /proc/mdstat showed | File |
 | --- | --- | --- |
-| Healthy | [2/2] [UU] | evidence/array-healthy.txt |
-| Degraded | [2/1] [U_] | evidence/array-degraded.txt |
-| Rebuilt | [2/2] [UU], sdd1 replaced sdc1 | evidence/array-rebuilt.txt |
-Checksums before and after the failure: <match / do not match>
+| Healthy | [2/2] [UU] | [evidence/array-healthy.txt](evidence/array-healthy.txt) |
+| Degraded | [2/1] [U_] | [evidence/array-degraded.txt](evidence/array-degraded.txt) |
+| Rebuilt | [2/2] [UU], sdd1 replaced sdc1 | [evidence/array-rebuilt.txt](evidence/array-rebuilt.txt) |
 
 ## RAID is not a backup
 Your colleague deleted the wrong file from the mirror an hour ago. Does RAID 1 help? Why?

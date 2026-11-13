@@ -38,6 +38,7 @@ sr0                        2.7G rom   iso9660
 <the commands, in order, in code blocks — create, fail, rebuild>
 
 ## Three states
+
 | State | What /proc/mdstat showed | File |
 | --- | --- | --- |
 | Healthy | [2/2] [UU] | evidence/array-healthy.txt |

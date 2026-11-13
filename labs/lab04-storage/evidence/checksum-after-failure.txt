@@ -1,0 +1,4 @@
+barat@localhost:~$ cat ~/lab04/evidence/checksum-after-failure.txt
+$ sha256sum proof.txt random.bin
+bd5c513cdb61d8daef970a3246bfe3bde8506f50813897eca9a4e4ddfcd2a7d3  proof.txt
+c321470d5f7b8b6b9b76fd4812a5b0c771d8d629f0f4fcf5035946a858bd7930  random.bin

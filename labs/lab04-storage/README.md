@@ -116,7 +116,7 @@ Checksums before and after the failure: match.
 
 ## RAID is not a backup
 
-No, RAID 1 does not help in this situation. A RAID 1 mirror instantly replicates all changes across the disks, meaning the accidental deletion was immediately applied to both drives simultaneously. To recover a deleted file, the colleague would need a true backup or a previous snapshot, not a high-availability hardware mirror.
+No, RAID 1 does not help in this situation. Because it replicates all changes across the disks, meaning the accidental deletion was applied to both drives simultaneously. To recover a deleted file, the colleague would need a true backup or a previous snapshot, but not a high-availability hardware mirror.
 
 ## What did not work the first time
 

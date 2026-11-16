@@ -18,19 +18,17 @@ Name: Barat Alimkhan - Date: 16.11.2026 - Tools: Ubuntu guest / PowerShell
 ## Fix
 ```bash
 #!/bin/sh
-# Lab 5: convert staff-broken.csv from RK1048 to UTF-8
+
 
 in=evidence/staff-broken.csv
 out=evidence/staff-fixed.csv
 
-# 1. Encoding
+
 iconv -f RK1048 -t UTF-8 "$in" > "$out"
 
-# 2. Line endings
-# I kept CRLF for compatibility with Windows, so sed is not used.
 
-# 3. BOM
-# Adding BOM (EF BB BF) to the start of the file for correct Excel double-click opening
+
+
 printf '\357\273\277' | cat - "$out" > tmp && mv tmp "$out"
 ```
 

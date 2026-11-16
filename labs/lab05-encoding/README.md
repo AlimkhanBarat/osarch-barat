@@ -35,7 +35,7 @@ printf '\357\273\277' | cat - "$out" > tmp && mv tmp "$out"
 ```
 
 ## Verification
-file now reports: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators (evidence/file-after.txt).
+file now reports: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators [evidence/file-after.txt](evidence/file-after.txt).
 
 The hex dump confirms the new file starts with the efbb bf BOM signature.
 

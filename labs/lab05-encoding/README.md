@@ -1,9 +1,11 @@
-# Lab 5 — Encoding forensics
+# Lab 5 - Encoding forensics
 
-Name: <name> · Date: <date> · Tools: <Ubuntu guest / Git Bash / macOS / PowerShell>
+Name: Barat Alimkhan - Date: 16.11.2026 - Tools: Ubuntu guest / PowerShell
 
 ## What I received
-<how it looked in Excel, LibreOffice and the terminal — one line each>
+- Excel: Russian names were readable, but Kazakh characters were replaced with incorrect symbols (for example, "J" instead of "Ә").
+- LibreOffice: The default import character set was detected as Windows-1251, which displayed the Kazakh characters incorrectly.
+- Terminal: The `cat` command output showed unreadable replacement symbols (question marks) because the terminal expects UTF-8.
 
 ## Diagnosis (made before the fix)
 - file said: Non-ISO extended-ASCII text, with CRLF line terminators (evidence/file-before.txt)
@@ -14,10 +16,30 @@ Name: <name> · Date: <date> · Tools: <Ubuntu guest / Git Bash / macOS / PowerS
 - Separator: `;` - because the hex dump shows `3b` right after "ID".
 
 ## Fix
-<the command or scripts/fix.sh, in a code block>
+```bash
+#!/bin/sh
+# Lab 5: convert staff-broken.csv from RK1048 to UTF-8
+
+in=evidence/staff-broken.csv
+out=evidence/staff-fixed.csv
+
+# 1. Encoding
+iconv -f RK1048 -t UTF-8 "$in" > "$out"
+
+# 2. Line endings
+# I kept CRLF for compatibility with Windows, so sed is not used.
+
+# 3. BOM
+# Adding BOM (EF BB BF) to the start of the file for correct Excel double-click opening
+printf '\357\273\277' | cat - "$out" > tmp && mv tmp "$out"
+```
 
 ## Verification
-<file-after.txt summary; the screenshot evidence/opens-correctly.png>
+file now reports: Unicode text, UTF-8 (with BOM) text, with CRLF line terminators (evidence/file-after.txt).
+
+The hex dump confirms the new file starts with the efbb bf BOM signature.
+
+The screenshot [evidence/opens-correctly.png](evidence/opens-correctly.png) shows that the fixed file opens perfectly in Excel, LibreOffice Calc, and the Linux terminal, with all Kazakh and Russian characters displaying correctly.
 
 ## What did not work the first time
-<at least one real thing>
+When I tried to download the fixed file to my Windows host using the scp command, I received a "No such file or directory" error. The issue was that I had not created the evidence folder on my local Windows machine before running the command. I resolved this by running mkdir evidence in PowerShell, and then the scp command executed successfully.

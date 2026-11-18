@@ -1,7 +1,5 @@
 # Lab 6 — Live processes and memory pressure
 
-Pair: <name> + <name> · Date: <date> · Guests: <Ubuntu version / Windows edition, RAM of each>
-
 Pair: Barat Alimkhan / Solo (instructor approved) · Date: 18.11.2026 · Guests: Ubuntu Server 26.04.1 (2 GB RAM) / Windows 11 Enterprise eval (4 GB RAM)
 
 ## Part 1 — One process, three tools
@@ -38,10 +36,9 @@ sudo swapoff -a
 stress-ng --vm 2 --vm-bytes 90% --timeout 60s
 sudo swapon -a
 ```
-
 | | Before | During (worst) | After |
 | Available |1.1Gi |24Mi |1.1Gi |
-| Swap used |0B |1.4Gi (peak) / 0B (when forced) |0B |
+| Swap used |0B |1.4Gi (peak) / 0B (when forced) |0B|
 What happened: As the load increased, the system started relying heavily on Swap (reaching over 1.4Gi). Terminal responsiveness degraded severely (heavy input lag and freezing), and stress-ng even reported metrics-check: all bogo-op counters are zero, indicating severe thrashing. However, because the host SSD (NVMe) was extremely fast, the swap absorbed the pressure even at 400% allocation. To demonstrate the OOM killer, we temporarily disabled the swap (sudo swapoff -a). Available memory instantly plummeted to 24Mi at 13:22:10, and the kernel forcibly killed the process.
 
 ### What the kernel did
@@ -52,7 +49,6 @@ At exactly 13:22:10 (which perfectly matches the 24Mi available memory drop in o
 ### Windows
 Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5 | Format-List TimeCreated, Id, Message
 
-Result:
 Get-WinEvent : No events were found that match the specified selection criteria.
 At line:1 char:1
 + Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Micro ...
@@ -61,8 +57,6 @@ At line:1 char:1
     + FullyQualifiedErrorId : NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand
 
 Explanation: The query returned no events because the Windows VM has not experienced critical memory pressure yet. Unlike Linux, which uses the OOM Killer to aggressively terminate processes when memory runs out, Windows uses the Resource-Exhaustion-Detector (Event ID 2004) to log a warning containing the names of the top memory-consuming processes. It then starts denying new memory allocations (allocations fail) rather than arbitrarily killing running apps.
-
-
 
 ## What did not work the first time
 The memory pressure experiment in Ubuntu did not trigger the OOM killer at first, even when allocating 400% of memory. I saw all bogo-op counters are zero which meant the system was thrashing, but it survived because the host's fast NVMe SSD allowed the 2GB Swap to absorb the load. To fix this and force the kernel to react, I temporarily disabled the swap using sudo swapoff -a, which immediately triggered the OOM killer as expected.

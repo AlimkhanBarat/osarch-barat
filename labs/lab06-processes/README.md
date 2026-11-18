@@ -9,6 +9,7 @@ Process chosen: `vmtoolsd.exe` / `vmtoolsd` (VMware Tools) — why: Since I am u
 
 | | Task Manager | Process Explorer | htop / ps |
 |---|---|---|---|
+
 | **PID** | 3508 | 3508 | 15494 |
 | **Parent (name and PID)** | — (not shown) | services.exe | systemd (1) |
 | **"Memory" as shown by default** | 3,004 K | 23,900 K | 11380 (RES) |

@@ -24,7 +24,6 @@ Process chosen: `vmtoolsd.exe` / `vmtoolsd` (VMware Tools) — why: Since I am u
 3. **Virtual Size Discrepancy:** In Windows, Task Manager's "Commit size" (10,408 K) roughly corresponds to Process Explorer's "Private Bytes" (10,412 K). However, Process Explorer's "Virtual Size" shows a massive 2+ TB (2,151,818,312 K) because it maps the entire 64-bit theoretical address space, whereas `htop` displays "VIRT" (111 M), which maps the allocated address space including shared libraries.
 
 ## Part 2 — Memory pressure
-## Part 2 — Memory pressure
 Guest RAM: 1.6 GiB (VM settings reduced to 2 GB) · swap: 2.0 GiB
 Steps: 
 ```bash

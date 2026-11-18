@@ -7,10 +7,8 @@ Pair: Barat Alimkhan / Solo (instructor approved) · Date: 18.11.2026 · Guests:
 ## Part 1 — One process, three tools
 Process chosen: `vmtoolsd.exe` / `vmtoolsd` (VMware Tools) — why: Since I am using VMware Workstation Pro, vmtoolsd is the direct equivalent of the VBoxService. It runs in the background on both the Windows and Ubuntu guests.
 
-
 | | Task Manager | Process Explorer | htop / ps |
 |---|---|---|---|
-
 | **PID** | 3508 | 3508 | 15494 |
 | **Parent (name and PID)** | — (not shown) | services.exe | systemd (1) |
 | **"Memory" as shown by default** | 3,004 K | 23,900 K | 11380 (RES) |

@@ -36,6 +36,7 @@ sudo swapoff -a
 stress-ng --vm 2 --vm-bytes 90% --timeout 60s
 sudo swapon -a
 ```
+
 | | Before | During (worst) | After |
 | Available |1.1Gi |24Mi |1.1Gi |
 | Swap used |0B |1.4Gi (peak) / 0B (when forced) |0B|

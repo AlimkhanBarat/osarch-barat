@@ -1,0 +1,1733 @@
+barat@localhost:~$ cat ~/lab06/kernel-log-extract.txt
+Nov 18 13:05:34 localhost kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+Nov 18 13:06:17 localhost kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+Nov 18 13:07:02 localhost kernel: perf: interrupt took too long (14964 > 14677), lowering kernel.perf_event_max_sample_rate to 13000
+Nov 18 13:11:23 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:11:23 localhost kernel: CPU: 1 UID: 1000 PID: 3116 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:11:23 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:11:23 localhost kernel: Call Trace:
+Nov 18 13:11:23 localhost kernel:  <TASK>
+Nov 18 13:11:23 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:11:23 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:11:23 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:11:23 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:11:23 localhost kernel: [   3115]  1000  3115   627225   180132   180002      130         0  3428352   235339          1000 stress-ng-vm
+Nov 18 13:11:23 localhost kernel: [   3116]  1000  3116   627225   147713   147583      130         0  3416064   266513          1000 stress-ng-vm
+Nov 18 13:11:23 localhost kernel: [   3134]  1000  3134     4413     1043      315      728         0    77824        0             0 sleep
+Nov 18 13:11:23 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3115,uid=1000
+Nov 18 13:11:23 localhost kernel: Out of memory: Killed process 3115 (stress-ng-vm) total-vm:2508900kB, anon-rss:720008kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:3348kB oom_score_adj:1000
+Nov 18 13:11:23 localhost kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 11 times, consider switching to WQ_UNBOUND
+Nov 18 13:11:29 localhost kernel: perf: interrupt took too long (18737 > 18705), lowering kernel.perf_event_max_sample_rate to 10000
+Nov 18 13:11:34 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:11:35 localhost kernel: CPU: 0 UID: 1000 PID: 3136 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:11:35 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:11:35 localhost kernel: Call Trace:
+Nov 18 13:11:35 localhost kernel:  <TASK>
+Nov 18 13:11:35 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:11:35 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:11:35 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:11:35 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:11:35 localhost kernel: [   3116]  1000  3116   627225   177556   177426      130         0  5001216   435033          1000 stress-ng-vm
+Nov 18 13:11:35 localhost kernel: [   3136]  1000  3136   627225   150079   149949      130         0  1835008    66626          1000 stress-ng-vm
+Nov 18 13:11:35 localhost kernel: [   3145]  1000  3145     4413     1046      316      730         0    81920        0             0 sleep
+Nov 18 13:11:35 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3116,uid=1000
+Nov 18 13:11:35 localhost kernel: Out of memory: Killed process 3116 (stress-ng-vm) total-vm:2508900kB, anon-rss:709704kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:4884kB oom_score_adj:1000
+Nov 18 13:11:54 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:11:54 localhost kernel: CPU: 0 UID: 1000 PID: 3146 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:11:54 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:11:54 localhost kernel: Call Trace:
+Nov 18 13:11:54 localhost kernel:  <TASK>
+Nov 18 13:11:54 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:11:54 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:11:54 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:11:54 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:11:54 localhost kernel: [   3136]  1000  3136   627225   133950   133820      130         0  4231168   381886          1000 stress-ng-vm
+Nov 18 13:11:54 localhost kernel: [   3146]  1000  3146   627225   194376   194246      130         0  2617344   119718          1000 stress-ng-vm
+Nov 18 13:11:54 localhost kernel: [   3162]  1000  3162     4413     1056      316      740         0    73728        0             0 sleep
+Nov 18 13:11:54 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3136,uid=1000
+Nov 18 13:11:54 localhost kernel: Out of memory: Killed process 3136 (stress-ng-vm) total-vm:2508900kB, anon-rss:535280kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:4132kB oom_score_adj:1000
+Nov 18 13:12:15 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:12:15 localhost kernel: CPU: 1 UID: 1000 PID: 3146 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:12:15 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:12:15 localhost kernel: Call Trace:
+Nov 18 13:12:15 localhost kernel:  <TASK>
+Nov 18 13:12:15 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:12:15 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:12:15 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:12:15 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:12:15 localhost kernel: [   3146]  1000  3146   627225   177293   177163      130         0  4796416   409494          1000 stress-ng-vm
+Nov 18 13:12:15 localhost kernel: [   3165]  1000  3165   627225   150715   150585      130         0  2048000    92643          1000 stress-ng-vm
+Nov 18 13:12:15 localhost kernel: [   3186]  1000  3186     4413     1043      315      728         0    69632        0             0 sleep
+Nov 18 13:12:15 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3146,uid=1000
+Nov 18 13:12:15 localhost kernel: Out of memory: Killed process 3146 (stress-ng-vm) total-vm:2508900kB, anon-rss:708652kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:4684kB oom_score_adj:1000
+Nov 18 13:12:18 localhost kernel: workqueue: psi_avgs_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+Nov 18 13:12:28 localhost kernel: workqueue: psi_avgs_work hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+Nov 18 13:12:34 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:12:34 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:12:34 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:12:34 localhost kernel: Call Trace:
+Nov 18 13:12:34 localhost kernel:  <TASK>
+Nov 18 13:12:34 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:12:34 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:12:34 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:12:34 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:12:34 localhost kernel: [   3165]  1000  3165   627225   170341   170202      136         3  4706304   405158          1000 stress-ng-vm
+Nov 18 13:12:34 localhost kernel: [   3188]  1000  3188   627225   156973   156834      136         3  2134016    97220          1000 stress-ng-vm
+Nov 18 13:12:34 localhost kernel: [   3204]  1000  3204     4413     1050      316      734         0    81920        0             0 sleep
+Nov 18 13:12:34 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3165,uid=1000
+Nov 18 13:12:34 localhost kernel: Out of memory: Killed process 3165 (stress-ng-vm) total-vm:2508900kB, anon-rss:680808kB, file-rss:544kB, shmem-rss:12kB, UID:1000 pgtables:4596kB oom_score_adj:1000
+Nov 18 13:12:38 localhost kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 19 times, consider switching to WQ_UNBOUND
+Nov 18 13:22:10 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:10 localhost kernel: CPU: 0 UID: 1000 PID: 3903 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:10 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:10 localhost kernel: Call Trace:
+Nov 18 13:22:10 localhost kernel:  <TASK>
+Nov 18 13:22:10 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:10 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:10 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:10 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:10 localhost kernel: [   3901]  1000  3901    15143      702      377      320         5    94208        0             0 stress-ng-vm
+Nov 18 13:22:10 localhost kernel: [   3902]  1000  3902   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:10 localhost kernel: [   3903]  1000  3903   230378    98071    97924      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:10 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3902,uid=1000
+Nov 18 13:22:10 localhost kernel: Out of memory: Killed process 3902 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:10 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:10 localhost kernel: CPU: 1 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:10 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:10 localhost kernel: Call Trace:
+Nov 18 13:22:10 localhost kernel:  <TASK>
+Nov 18 13:22:10 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:10 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:10 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:10 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:10 localhost kernel: [   3903]  1000  3903   230378   143123   142976      130        17  1245184        0          1000 stress-ng-vm
+Nov 18 13:22:10 localhost kernel: [   3905]  1000  3905   230378   170747   170600      130        17  1466368        0          1000 stress-ng-vm
+Nov 18 13:22:10 localhost kernel: [   3908]  1000  3908     4410      913      289      624         0    73728        0             0 sleep
+Nov 18 13:22:10 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3905,uid=1000
+Nov 18 13:22:10 localhost kernel: Out of memory: Killed process 3905 (stress-ng-vm) total-vm:921512kB, anon-rss:682400kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1432kB oom_score_adj:1000
+Nov 18 13:22:11 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:11 localhost kernel: CPU: 1 UID: 1000 PID: 3909 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:11 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:11 localhost kernel: Call Trace:
+Nov 18 13:22:11 localhost kernel:  <TASK>
+Nov 18 13:22:11 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:11 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:11 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:11 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:11 localhost kernel: [   3903]  1000  3903   230378   192102   191955      130        17  1634304        0          1000 stress-ng-vm
+Nov 18 13:22:11 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:11 localhost kernel: [   3909]  1000  3909   230378   121710   121563      130        17  1073152        0          1000 stress-ng-vm
+Nov 18 13:22:11 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3903,uid=1000
+Nov 18 13:22:11 localhost kernel: Out of memory: Killed process 3903 (stress-ng-vm) total-vm:921512kB, anon-rss:767820kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1596kB oom_score_adj:1000
+Nov 18 13:22:12 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:12 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:12 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:12 localhost kernel: Call Trace:
+Nov 18 13:22:12 localhost kernel:  <TASK>
+Nov 18 13:22:12 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:12 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:12 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:12 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:12 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:12 localhost kernel: [   3909]  1000  3909   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:12 localhost kernel: [   3910]  1000  3910   230378    95538    95391      130        17   864256        0          1000 stress-ng-vm
+Nov 18 13:22:12 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3909,uid=1000
+Nov 18 13:22:12 localhost kernel: Out of memory: Killed process 3909 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:12 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:12 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:12 localhost kernel: CPU: 1 UID: 1000 PID: 3911 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:12 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:12 localhost kernel: Call Trace:
+Nov 18 13:22:12 localhost kernel:  <TASK>
+Nov 18 13:22:12 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:12 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:12 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:12 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:12 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:12 localhost kernel: [   3910]  1000  3910   230378   148176   148029      130        17  1286144        0          1000 stress-ng-vm
+Nov 18 13:22:12 localhost kernel: [   3911]  1000  3911   230378   165584   165437      130        17  1425408        0          1000 stress-ng-vm
+Nov 18 13:22:12 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3911,uid=1000
+Nov 18 13:22:12 localhost kernel: Out of memory: Killed process 3911 (stress-ng-vm) total-vm:921512kB, anon-rss:661748kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1392kB oom_score_adj:1000
+Nov 18 13:22:12 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:12 localhost kernel: CPU: 0 UID: 1000 PID: 3910 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:12 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:12 localhost kernel: Call Trace:
+Nov 18 13:22:12 localhost kernel:  <TASK>
+Nov 18 13:22:12 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:12 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:12 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:12 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:12 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:12 localhost kernel: [   3910]  1000  3910   230378   188569   188422      130        17  1605632        0          1000 stress-ng-vm
+Nov 18 13:22:12 localhost kernel: [   3912]  1000  3912   230378   125256   125109      130        17  1101824        0          1000 stress-ng-vm
+Nov 18 13:22:12 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3910,uid=1000
+Nov 18 13:22:12 localhost kernel: Out of memory: Killed process 3910 (stress-ng-vm) total-vm:921512kB, anon-rss:753688kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1568kB oom_score_adj:1000
+Nov 18 13:22:13 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:13 localhost kernel: CPU: 1 UID: 1000 PID: 3913 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:13 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:13 localhost kernel: Call Trace:
+Nov 18 13:22:13 localhost kernel:  <TASK>
+Nov 18 13:22:13 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:13 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:13 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:13 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:13 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:13 localhost kernel: [   3912]  1000  3912   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:13 localhost kernel: [   3913]  1000  3913   230378    98128    97981      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:13 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3912,uid=1000
+Nov 18 13:22:13 localhost kernel: Out of memory: Killed process 3912 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:13 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:13 localhost kernel: CPU: 1 UID: 1000 PID: 3913 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:13 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:13 localhost kernel: Call Trace:
+Nov 18 13:22:13 localhost kernel:  <TASK>
+Nov 18 13:22:13 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:13 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:13 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:13 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:13 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:13 localhost kernel: [   3913]  1000  3913   230378   151337   151189      131        17  1310720        0          1000 stress-ng-vm
+Nov 18 13:22:13 localhost kernel: [   3914]  1000  3914   230378   161488   161340      131        17  1388544        0          1000 stress-ng-vm
+Nov 18 13:22:13 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3914,uid=1000
+Nov 18 13:22:13 localhost kernel: Out of memory: Killed process 3914 (stress-ng-vm) total-vm:921512kB, anon-rss:645360kB, file-rss:524kB, shmem-rss:68kB, UID:1000 pgtables:1356kB oom_score_adj:1000
+Nov 18 13:22:13 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:13 localhost kernel: CPU: 1 UID: 1000 PID: 3915 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:13 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:13 localhost kernel: Call Trace:
+Nov 18 13:22:13 localhost kernel:  <TASK>
+Nov 18 13:22:13 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:13 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:13 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:13 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:13 localhost kernel: [   3908]  1000  3908     4413     1036      316      720         0    77824        0             0 sleep
+Nov 18 13:22:13 localhost kernel: [   3913]  1000  3913   230378   192398   192251      130        17  1638400        0          1000 stress-ng-vm
+Nov 18 13:22:13 localhost kernel: [   3915]  1000  3915   230378   121429   121282      130        17  1069056        0          1000 stress-ng-vm
+Nov 18 13:22:13 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3913,uid=1000
+Nov 18 13:22:13 localhost kernel: Out of memory: Killed process 3913 (stress-ng-vm) total-vm:921512kB, anon-rss:769004kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1600kB oom_score_adj:1000
+Nov 18 13:22:13 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:14 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:14 localhost kernel: CPU: 1 UID: 1000 PID: 3916 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:14 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:14 localhost kernel: Call Trace:
+Nov 18 13:22:14 localhost kernel:  <TASK>
+Nov 18 13:22:14 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:14 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:14 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:14 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:14 localhost kernel: [   3915]  1000  3915   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:14 localhost kernel: [   3916]  1000  3916   230378    98083    97936      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:14 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:14 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3915,uid=1000
+Nov 18 13:22:14 localhost kernel: Out of memory: Killed process 3915 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:14 localhost kernel: Out of memory: Killed process 3920 (stress-ng-vm) total-vm:921512kB, anon-rss:660472kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1388kB oom_score_adj:1000
+Nov 18 13:22:14 localhost kernel: Out of memory: Killed process 3916 (stress-ng-vm) total-vm:921512kB, anon-rss:761948kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1584kB oom_score_adj:1000
+Nov 18 13:22:15 localhost kernel: oom_kill_process: 2 callbacks suppressed
+Nov 18 13:22:15 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:15 localhost kernel: CPU: 1 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:15 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:15 localhost kernel: Call Trace:
+Nov 18 13:22:15 localhost kernel:  <TASK>
+Nov 18 13:22:15 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:15 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:15 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:15 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:15 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:15 localhost kernel: [   3921]  1000  3921   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:15 localhost kernel: [   3922]  1000  3922   230378    96022    95875      130        17   868352        0          1000 stress-ng-vm
+Nov 18 13:22:15 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3921,uid=1000
+Nov 18 13:22:15 localhost kernel: Out of memory: Killed process 3921 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:15 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:15 localhost kernel: CPU: 1 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:15 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:15 localhost kernel: Call Trace:
+Nov 18 13:22:15 localhost kernel:  <TASK>
+Nov 18 13:22:15 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:15 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:15 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:15 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:15 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:15 localhost kernel: [   3922]  1000  3922   230378   118387   118240      130        17  1044480        0          1000 stress-ng-vm
+Nov 18 13:22:15 localhost kernel: [   3923]  1000  3923   230378   195501   195354      130        17  1662976        0          1000 stress-ng-vm
+Nov 18 13:22:15 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3923,uid=1000
+Nov 18 13:22:15 localhost kernel: Out of memory: Killed process 3923 (stress-ng-vm) total-vm:921512kB, anon-rss:781416kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1624kB oom_score_adj:1000
+Nov 18 13:22:15 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:15 localhost kernel: CPU: 0 UID: 1000 PID: 3924 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:15 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:15 localhost kernel: Call Trace:
+Nov 18 13:22:15 localhost kernel:  <TASK>
+Nov 18 13:22:15 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:15 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:15 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:15 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:15 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:15 localhost kernel: [   3922]  1000  3922   230378   161960   161812      131        17  1392640        0          1000 stress-ng-vm
+Nov 18 13:22:15 localhost kernel: [   3924]  1000  3924   230378   150224   150076      131        17  1298432        0          1000 stress-ng-vm
+Nov 18 13:22:15 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3922,uid=1000
+Nov 18 13:22:15 localhost kernel: Out of memory: Killed process 3922 (stress-ng-vm) total-vm:921512kB, anon-rss:647316kB, file-rss:524kB, shmem-rss:68kB, UID:1000 pgtables:1360kB oom_score_adj:1000
+Nov 18 13:22:16 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:16 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:16 localhost kernel: CPU: 1 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:16 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:16 localhost kernel: Call Trace:
+Nov 18 13:22:16 localhost kernel:  <TASK>
+Nov 18 13:22:16 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:16 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:16 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:16 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:16 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:16 localhost kernel: [   3924]  1000  3924   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:16 localhost kernel: [   3925]  1000  3925   230378    98091    97944      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:16 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3924,uid=1000
+Nov 18 13:22:16 localhost kernel: Out of memory: Killed process 3924 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:16 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:16 localhost kernel: CPU: 0 UID: 1000 PID: 3925 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:16 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:16 localhost kernel: Call Trace:
+Nov 18 13:22:16 localhost kernel:  <TASK>
+Nov 18 13:22:16 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:16 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:16 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:16 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:16 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:16 localhost kernel: [   3925]  1000  3925   230378   149713   149566      130        17  1298432        0          1000 stress-ng-vm
+Nov 18 13:22:16 localhost kernel: [   3926]  1000  3926   230378   164189   164042      130        17  1413120        0          1000 stress-ng-vm
+Nov 18 13:22:16 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3926,uid=1000
+Nov 18 13:22:16 localhost kernel: Out of memory: Killed process 3926 (stress-ng-vm) total-vm:921512kB, anon-rss:656168kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1380kB oom_score_adj:1000
+Nov 18 13:22:16 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:16 localhost kernel: CPU: 1 UID: 1000 PID: 3927 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:16 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:16 localhost kernel: Call Trace:
+Nov 18 13:22:16 localhost kernel:  <TASK>
+Nov 18 13:22:16 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:16 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:16 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:16 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:16 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:16 localhost kernel: [   3925]  1000  3925   230378   172733   172586      130        17  1478656        0          1000 stress-ng-vm
+Nov 18 13:22:16 localhost kernel: [   3927]  1000  3927   230378   141120   140973      130        17  1228800        0          1000 stress-ng-vm
+Nov 18 13:22:16 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3925,uid=1000
+Nov 18 13:22:16 localhost kernel: Out of memory: Killed process 3925 (stress-ng-vm) total-vm:921512kB, anon-rss:690344kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1444kB oom_score_adj:1000
+Nov 18 13:22:16 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:17 localhost kernel: CPU: 0 UID: 1000 PID: 3928 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:17 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:17 localhost kernel: Call Trace:
+Nov 18 13:22:17 localhost kernel:  <TASK>
+Nov 18 13:22:17 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:17 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:17 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:17 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:17 localhost kernel: [   3919]  1000  3919     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:17 localhost kernel: [   3927]  1000  3927   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: [   3928]  1000  3928   230378    98064    97917      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3927,uid=1000
+Nov 18 13:22:17 localhost kernel: Out of memory: Killed process 3927 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:17 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:17 localhost kernel: CPU: 1 UID: 1000 PID: 3928 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:17 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:17 localhost kernel: Call Trace:
+Nov 18 13:22:17 localhost kernel:  <TASK>
+Nov 18 13:22:17 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:17 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:17 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:17 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:17 localhost kernel: [   3928]  1000  3928   230378   149913   149766      130        17  1298432        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: [   3930]  1000  3930   230378   163903   163756      130        17  1409024        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: [   3932]  1000  3932     4413     1046      316      730         0    73728        0             0 sleep
+Nov 18 13:22:17 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3930,uid=1000
+Nov 18 13:22:17 localhost kernel: Out of memory: Killed process 3930 (stress-ng-vm) total-vm:921512kB, anon-rss:655024kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1376kB oom_score_adj:1000
+Nov 18 13:22:17 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:17 localhost kernel: CPU: 1 UID: 1000 PID: 3928 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:17 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:17 localhost kernel: Call Trace:
+Nov 18 13:22:17 localhost kernel:  <TASK>
+Nov 18 13:22:17 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:17 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:17 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:17 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:17 localhost kernel: [   3928]  1000  3928   230378   186326   186179      130        17  1589248        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: [   3932]  1000  3932     4413     1046      316      730         0    73728        0             0 sleep
+Nov 18 13:22:17 localhost kernel: [   3933]  1000  3933   230378   127520   127373      130        17  1118208        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3928,uid=1000
+Nov 18 13:22:17 localhost kernel: Out of memory: Killed process 3928 (stress-ng-vm) total-vm:921512kB, anon-rss:744716kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1552kB oom_score_adj:1000
+Nov 18 13:22:17 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:17 localhost kernel: CPU: 1 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:17 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:17 localhost kernel: Call Trace:
+Nov 18 13:22:17 localhost kernel:  <TASK>
+Nov 18 13:22:17 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:17 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:17 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:17 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:17 localhost kernel: [   3932]  1000  3932     4413     1046      316      730         0    73728        0             0 sleep
+Nov 18 13:22:17 localhost kernel: [   3933]  1000  3933   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: [   3934]  1000  3934   230378    98128    97981      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:17 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3933,uid=1000
+Nov 18 13:22:17 localhost kernel: Out of memory: Killed process 3933 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:18 localhost kernel: Out of memory: Killed process 3935 (stress-ng-vm) total-vm:921512kB, anon-rss:631024kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1332kB oom_score_adj:1000
+Nov 18 13:22:18 localhost kernel: Out of memory: Killed process 3934 (stress-ng-vm) total-vm:921512kB, anon-rss:694528kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1456kB oom_score_adj:1000
+Nov 18 13:22:18 localhost kernel: Out of memory: Killed process 3936 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:18 localhost kernel: Out of memory: Killed process 3938 (stress-ng-vm) total-vm:921512kB, anon-rss:760028kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1580kB oom_score_adj:1000
+Nov 18 13:22:19 localhost kernel: Out of memory: Killed process 3937 (stress-ng-vm) total-vm:921512kB, anon-rss:679900kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1424kB oom_score_adj:1000
+Nov 18 13:22:19 localhost kernel: Out of memory: Killed process 3939 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:19 localhost kernel: Out of memory: Killed process 3941 (stress-ng-vm) total-vm:921512kB, anon-rss:694836kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1456kB oom_score_adj:1000
+Nov 18 13:22:20 localhost kernel: oom_kill_process: 7 callbacks suppressed
+Nov 18 13:22:20 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:20 localhost kernel: CPU: 0 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:20 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:20 localhost kernel: Call Trace:
+Nov 18 13:22:20 localhost kernel:  <TASK>
+Nov 18 13:22:20 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:20 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:20 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:20 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:20 localhost kernel: [   3932]  1000  3932     4413     1046      316      730         0    73728        0             0 sleep
+Nov 18 13:22:20 localhost kernel: [   3940]  1000  3940   230378   170256   170109      130        17  1462272        0          1000 stress-ng-vm
+Nov 18 13:22:20 localhost kernel: [   3942]  1000  3942   230378   143631   143484      130        17  1249280        0          1000 stress-ng-vm
+Nov 18 13:22:20 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3940,uid=1000
+Nov 18 13:22:20 localhost kernel: Out of memory: Killed process 3940 (stress-ng-vm) total-vm:921512kB, anon-rss:680436kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1428kB oom_score_adj:1000
+Nov 18 13:22:20 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:20 localhost kernel: CPU: 0 UID: 1000 PID: 3943 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:20 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:20 localhost kernel: Call Trace:
+Nov 18 13:22:20 localhost kernel:  <TASK>
+Nov 18 13:22:20 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:20 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:20 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:20 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:20 localhost kernel: [   3942]  1000  3942   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:20 localhost kernel: [   3943]  1000  3943   230378    98066    97919      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:20 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:20 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3942,uid=1000
+Nov 18 13:22:20 localhost kernel: Out of memory: Killed process 3942 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:20 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:20 localhost kernel: CPU: 0 UID: 1000 PID: 3943 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:20 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:20 localhost kernel: Call Trace:
+Nov 18 13:22:20 localhost kernel:  <TASK>
+Nov 18 13:22:20 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:20 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:20 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:20 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:20 localhost kernel: [   3943]  1000  3943   230378   158264   158117      130        17  1363968        0          1000 stress-ng-vm
+Nov 18 13:22:20 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:20 localhost kernel: [   3947]  1000  3947   230378   155535   155388      130        17  1343488        0          1000 stress-ng-vm
+Nov 18 13:22:20 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3943,uid=1000
+Nov 18 13:22:20 localhost kernel: Out of memory: Killed process 3943 (stress-ng-vm) total-vm:921512kB, anon-rss:632468kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1332kB oom_score_adj:1000
+Nov 18 13:22:21 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:21 localhost kernel: CPU: 1 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:21 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:21 localhost kernel: Call Trace:
+Nov 18 13:22:21 localhost kernel:  <TASK>
+Nov 18 13:22:21 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:21 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:21 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:21 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:21 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:21 localhost kernel: [   3947]  1000  3947   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:21 localhost kernel: [   3948]  1000  3948   230378    98067    97920      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:21 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3947,uid=1000
+Nov 18 13:22:21 localhost kernel: Out of memory: Killed process 3947 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:21 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:21 localhost kernel: CPU: 1 UID: 1000 PID: 3948 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:21 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:21 localhost kernel: Call Trace:
+Nov 18 13:22:21 localhost kernel:  <TASK>
+Nov 18 13:22:21 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:21 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:21 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:21 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:21 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:21 localhost kernel: [   3948]  1000  3948   230378   155778   155631      130        17  1343488        0          1000 stress-ng-vm
+Nov 18 13:22:21 localhost kernel: [   3949]  1000  3949   230378   156044   155897      130        17  1347584        0          1000 stress-ng-vm
+Nov 18 13:22:21 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3949,uid=1000
+Nov 18 13:22:21 localhost kernel: Out of memory: Killed process 3949 (stress-ng-vm) total-vm:921512kB, anon-rss:623588kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1316kB oom_score_adj:1000
+Nov 18 13:22:21 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:21 localhost kernel: CPU: 0 UID: 1000 PID: 3950 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:21 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:21 localhost kernel: Call Trace:
+Nov 18 13:22:21 localhost kernel:  <TASK>
+Nov 18 13:22:21 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:21 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:21 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:21 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:21 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:21 localhost kernel: [   3948]  1000  3948   230378   171780   171633      130        17  1474560        0          1000 stress-ng-vm
+Nov 18 13:22:21 localhost kernel: [   3950]  1000  3950   230378   142105   141958      130        17  1236992        0          1000 stress-ng-vm
+Nov 18 13:22:21 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3948,uid=1000
+Nov 18 13:22:21 localhost kernel: Out of memory: Killed process 3948 (stress-ng-vm) total-vm:921512kB, anon-rss:686532kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1440kB oom_score_adj:1000
+Nov 18 13:22:21 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:22 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:22 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:22 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:22 localhost kernel: Call Trace:
+Nov 18 13:22:22 localhost kernel:  <TASK>
+Nov 18 13:22:22 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:22 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:22 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:22 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:22 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:22 localhost kernel: [   3950]  1000  3950   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:22 localhost kernel: [   3951]  1000  3951   230378    98072    97925      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:22 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3950,uid=1000
+Nov 18 13:22:22 localhost kernel: Out of memory: Killed process 3950 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:22 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:22 localhost kernel: CPU: 0 UID: 1000 PID: 3953 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:22 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:22 localhost kernel: Call Trace:
+Nov 18 13:22:22 localhost kernel:  <TASK>
+Nov 18 13:22:22 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:22 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:22 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:22 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:22 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:22 localhost kernel: [   3951]  1000  3951   230378   162761   162613      131        17  1400832        0          1000 stress-ng-vm
+Nov 18 13:22:22 localhost kernel: [   3953]  1000  3953   230378   150559   150411      131        17  1302528        0          1000 stress-ng-vm
+Nov 18 13:22:22 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3951,uid=1000
+Nov 18 13:22:22 localhost kernel: Out of memory: Killed process 3951 (stress-ng-vm) total-vm:921512kB, anon-rss:650452kB, file-rss:524kB, shmem-rss:68kB, UID:1000 pgtables:1368kB oom_score_adj:1000
+Nov 18 13:22:23 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:23 localhost kernel: CPU: 0 UID: 1000 PID: 3954 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:23 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:23 localhost kernel: Call Trace:
+Nov 18 13:22:23 localhost kernel:  <TASK>
+Nov 18 13:22:23 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:23 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:23 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:23 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:23 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:23 localhost kernel: [   3953]  1000  3953   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:23 localhost kernel: [   3954]  1000  3954   230378    96080    95933      130        17   868352        0          1000 stress-ng-vm
+Nov 18 13:22:23 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3953,uid=1000
+Nov 18 13:22:23 localhost kernel: Out of memory: Killed process 3953 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:23 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:23 localhost kernel: CPU: 0 UID: 1000 PID: 3954 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:23 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:23 localhost kernel: Call Trace:
+Nov 18 13:22:23 localhost kernel:  <TASK>
+Nov 18 13:22:23 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:23 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:23 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:23 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:23 localhost kernel: [   3946]  1000  3946     4413     1046      316      730         0    77824        0             0 sleep
+Nov 18 13:22:23 localhost kernel: [   3954]  1000  3954   230378   155590   155442      131        17  1343488        0          1000 stress-ng-vm
+Nov 18 13:22:23 localhost kernel: [   3955]  1000  3955   230378   157393   157245      131        17  1359872        0          1000 stress-ng-vm
+Nov 18 13:22:23 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3955,uid=1000
+Nov 18 13:22:23 localhost kernel: Out of memory: Killed process 3955 (stress-ng-vm) total-vm:921512kB, anon-rss:628980kB, file-rss:524kB, shmem-rss:68kB, UID:1000 pgtables:1328kB oom_score_adj:1000
+Nov 18 13:22:23 localhost kernel: Out of memory: Killed process 3954 (stress-ng-vm) total-vm:921512kB, anon-rss:744528kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1552kB oom_score_adj:1000
+Nov 18 13:22:24 localhost kernel: Out of memory: Killed process 3956 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:24 localhost kernel: Out of memory: Killed process 3961 (stress-ng-vm) total-vm:921512kB, anon-rss:696572kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1460kB oom_score_adj:1000
+Nov 18 13:22:24 localhost kernel: Out of memory: Killed process 3960 (stress-ng-vm) total-vm:921512kB, anon-rss:696564kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1460kB oom_score_adj:1000
+Nov 18 13:22:25 localhost kernel: oom_kill_process: 4 callbacks suppressed
+Nov 18 13:22:25 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:25 localhost kernel: CPU: 1 UID: 1000 PID: 3963 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:25 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:25 localhost kernel: Call Trace:
+Nov 18 13:22:25 localhost kernel:  <TASK>
+Nov 18 13:22:25 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:25 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:25 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:25 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:25 localhost kernel: [   3959]  1000  3959     4413     1033      316      717         0    77824        0             0 sleep
+Nov 18 13:22:25 localhost kernel: [   3962]  1000  3962   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:25 localhost kernel: [   3963]  1000  3963   230378    96081    95934      130        17   868352        0          1000 stress-ng-vm
+Nov 18 13:22:25 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3962,uid=1000
+Nov 18 13:22:25 localhost kernel: Out of memory: Killed process 3962 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:25 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:25 localhost kernel: CPU: 1 UID: 1000 PID: 3964 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:25 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:25 localhost kernel: Call Trace:
+Nov 18 13:22:25 localhost kernel:  <TASK>
+Nov 18 13:22:25 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:25 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:25 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:25 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:25 localhost kernel: [   3959]  1000  3959     4413     1033      316      717         0    77824        0             0 sleep
+Nov 18 13:22:25 localhost kernel: [   3963]  1000  3963   230378   142032   141885      130        17  1236992        0          1000 stress-ng-vm
+Nov 18 13:22:25 localhost kernel: [   3964]  1000  3964   230378   171728   171581      130        17  1474560        0          1000 stress-ng-vm
+Nov 18 13:22:25 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3964,uid=1000
+Nov 18 13:22:25 localhost kernel: Out of memory: Killed process 3964 (stress-ng-vm) total-vm:921512kB, anon-rss:686324kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1440kB oom_score_adj:1000
+Nov 18 13:22:25 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:25 localhost kernel: CPU: 1 UID: 1000 PID: 3965 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:25 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:25 localhost kernel: Call Trace:
+Nov 18 13:22:25 localhost kernel:  <TASK>
+Nov 18 13:22:25 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:25 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:25 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:25 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:25 localhost kernel: [   3959]  1000  3959     4413     1033      316      717         0    77824        0             0 sleep
+Nov 18 13:22:25 localhost kernel: [   3963]  1000  3963   230378   185967   185820      130        17  1585152        0          1000 stress-ng-vm
+Nov 18 13:22:25 localhost kernel: [   3965]  1000  3965   230378   127893   127746      130        17  1122304        0          1000 stress-ng-vm
+Nov 18 13:22:25 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3963,uid=1000
+Nov 18 13:22:25 localhost kernel: Out of memory: Killed process 3963 (stress-ng-vm) total-vm:921512kB, anon-rss:743280kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1548kB oom_score_adj:1000
+Nov 18 13:22:25 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:26 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:26 localhost kernel: CPU: 0 UID: 1000 PID: 3966 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:26 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:26 localhost kernel: Call Trace:
+Nov 18 13:22:26 localhost kernel:  <TASK>
+Nov 18 13:22:26 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:26 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:26 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:26 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:26 localhost kernel: [   3959]  1000  3959     4413     1033      316      717         0    77824        0             0 sleep
+Nov 18 13:22:26 localhost kernel: [   3965]  1000  3965   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:26 localhost kernel: [   3966]  1000  3966   230378    98130    97983      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:26 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3965,uid=1000
+Nov 18 13:22:26 localhost kernel: Out of memory: Killed process 3965 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:26 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:26 localhost kernel: CPU: 1 UID: 1000 PID: 3966 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:26 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:26 localhost kernel: Call Trace:
+Nov 18 13:22:26 localhost kernel:  <TASK>
+Nov 18 13:22:26 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:26 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:26 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:26 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:26 localhost kernel: [   3959]  1000  3959     4413     1033      316      717         0    77824        0             0 sleep
+Nov 18 13:22:26 localhost kernel: [   3966]  1000  3966   230378   160126   159979      130        17  1380352        0          1000 stress-ng-vm
+Nov 18 13:22:26 localhost kernel: [   3967]  1000  3967   230378   153551   153404      130        17  1327104        0          1000 stress-ng-vm
+Nov 18 13:22:26 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3966,uid=1000
+Nov 18 13:22:26 localhost kernel: Out of memory: Killed process 3966 (stress-ng-vm) total-vm:921512kB, anon-rss:639916kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1348kB oom_score_adj:1000
+Nov 18 13:22:26 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:26 localhost kernel: CPU: 0 UID: 1000 PID: 3967 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:27 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:27 localhost kernel: Call Trace:
+Nov 18 13:22:27 localhost kernel:  <TASK>
+Nov 18 13:22:27 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:27 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:27 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:27 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:27 localhost kernel: [   3967]  1000  3967   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:27 localhost kernel: [   3968]  1000  3968   230378    98069    97922      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:27 localhost kernel: [   3971]  1000  3971     4413     1035      316      719         0    77824        0             0 sleep
+Nov 18 13:22:27 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3967,uid=1000
+Nov 18 13:22:27 localhost kernel: Out of memory: Killed process 3967 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:27 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:27 localhost kernel: CPU: 1 UID: 1000 PID: 3968 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:27 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:27 localhost kernel: Call Trace:
+Nov 18 13:22:27 localhost kernel:  <TASK>
+Nov 18 13:22:27 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:27 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:27 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:27 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:27 localhost kernel: [   3968]  1000  3968   230378   126738   126591      130        17  1114112        0          1000 stress-ng-vm
+Nov 18 13:22:27 localhost kernel: [   3971]  1000  3971     4413     1035      316      719         0    77824        0             0 sleep
+Nov 18 13:22:27 localhost kernel: [   3972]  1000  3972   230378   187088   186941      130        17  1597440        0          1000 stress-ng-vm
+Nov 18 13:22:27 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3972,uid=1000
+Nov 18 13:22:27 localhost kernel: Out of memory: Killed process 3972 (stress-ng-vm) total-vm:921512kB, anon-rss:747764kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1560kB oom_score_adj:1000
+Nov 18 13:22:27 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:27 localhost kernel: CPU: 1 UID: 1000 PID: 3968 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:27 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:27 localhost kernel: Call Trace:
+Nov 18 13:22:27 localhost kernel:  <TASK>
+Nov 18 13:22:27 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:27 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:27 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:27 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:27 localhost kernel: [   3968]  1000  3968   230378   173329   173182      130        17  1486848        0          1000 stress-ng-vm
+Nov 18 13:22:27 localhost kernel: [   3971]  1000  3971     4413     1035      316      719         0    77824        0             0 sleep
+Nov 18 13:22:27 localhost kernel: [   3973]  1000  3973   230378   140486   140339      130        17  1220608        0          1000 stress-ng-vm
+Nov 18 13:22:27 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3968,uid=1000
+Nov 18 13:22:27 localhost kernel: Out of memory: Killed process 3968 (stress-ng-vm) total-vm:921512kB, anon-rss:692728kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1452kB oom_score_adj:1000
+Nov 18 13:22:28 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:28 localhost kernel: CPU: 1 UID: 1000 PID: 3973 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:28 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:28 localhost kernel: Call Trace:
+Nov 18 13:22:28 localhost kernel:  <TASK>
+Nov 18 13:22:28 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:28 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:28 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:28 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:28 localhost kernel: [   3971]  1000  3971     4413     1035      316      719         0    77824        0             0 sleep
+Nov 18 13:22:28 localhost kernel: [   3973]  1000  3973   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:28 localhost kernel: [   3974]  1000  3974   230378    98073    97926      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:28 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3973,uid=1000
+Nov 18 13:22:28 localhost kernel: Out of memory: Killed process 3973 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:28 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:28 localhost kernel: CPU: 1 UID: 1000 PID: 3974 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:28 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:28 localhost kernel: Call Trace:
+Nov 18 13:22:28 localhost kernel:  <TASK>
+Nov 18 13:22:28 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:28 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:28 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:28 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:28 localhost kernel: [   3971]  1000  3971     4413     1035      316      719         0    77824        0             0 sleep
+Nov 18 13:22:28 localhost kernel: [   3974]  1000  3974   230378   148044   147897      130        17  1282048        0          1000 stress-ng-vm
+Nov 18 13:22:28 localhost kernel: [   3975]  1000  3975   230378   165824   165677      130        17  1425408        0          1000 stress-ng-vm
+Nov 18 13:22:28 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3975,uid=1000
+Nov 18 13:22:28 localhost kernel: Out of memory: Killed process 3975 (stress-ng-vm) total-vm:921512kB, anon-rss:662708kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1392kB oom_score_adj:1000
+Nov 18 13:22:28 localhost kernel: Out of memory: Killed process 3974 (stress-ng-vm) total-vm:921512kB, anon-rss:710824kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1484kB oom_score_adj:1000
+Nov 18 13:22:29 localhost kernel: Out of memory: Killed process 3976 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:29 localhost kernel: Out of memory: Killed process 3978 (stress-ng-vm) total-vm:921512kB, anon-rss:662784kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1392kB oom_score_adj:1000
+Nov 18 13:22:29 localhost kernel: Out of memory: Killed process 3977 (stress-ng-vm) total-vm:921512kB, anon-rss:772396kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1608kB oom_score_adj:1000
+Nov 18 13:22:29 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:30 localhost kernel: oom_kill_process: 4 callbacks suppressed
+Nov 18 13:22:30 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:30 localhost kernel: CPU: 1 UID: 1000 PID: 3979 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:30 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:30 localhost kernel: Call Trace:
+Nov 18 13:22:30 localhost kernel:  <TASK>
+Nov 18 13:22:30 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:30 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:30 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:30 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:30 localhost kernel: [   3979]  1000  3979   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:30 localhost kernel: [   3981]  1000  3981   230378    96025    95878      130        17   868352        0          1000 stress-ng-vm
+Nov 18 13:22:30 localhost kernel: [   3983]  1000  3983     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:30 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3979,uid=1000
+Nov 18 13:22:30 localhost kernel: Out of memory: Killed process 3979 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:30 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:30 localhost kernel: CPU: 1 UID: 1000 PID: 3981 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:30 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:30 localhost kernel: Call Trace:
+Nov 18 13:22:30 localhost kernel:  <TASK>
+Nov 18 13:22:30 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:30 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:30 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:30 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:30 localhost kernel: [   3981]  1000  3981   230378   121767   121620      130        17  1073152        0          1000 stress-ng-vm
+Nov 18 13:22:30 localhost kernel: [   3983]  1000  3983     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:30 localhost kernel: [   3984]  1000  3984   230378   192119   191972      130        17  1634304        0          1000 stress-ng-vm
+Nov 18 13:22:30 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3984,uid=1000
+Nov 18 13:22:30 localhost kernel: Out of memory: Killed process 3984 (stress-ng-vm) total-vm:921512kB, anon-rss:767888kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1596kB oom_score_adj:1000
+Nov 18 13:22:30 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:30 localhost kernel: CPU: 1 UID: 1000 PID: 3981 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:30 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:30 localhost kernel: Call Trace:
+Nov 18 13:22:30 localhost kernel:  <TASK>
+Nov 18 13:22:30 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:30 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:30 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:30 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:30 localhost kernel: [   3981]  1000  3981   230378   176312   176165      130        17  1507328        0          1000 stress-ng-vm
+Nov 18 13:22:30 localhost kernel: [   3983]  1000  3983     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:30 localhost kernel: [   3985]  1000  3985   230378   137553   137406      130        17  1200128        0          1000 stress-ng-vm
+Nov 18 13:22:30 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3981,uid=1000
+Nov 18 13:22:30 localhost kernel: Out of memory: Killed process 3981 (stress-ng-vm) total-vm:921512kB, anon-rss:704660kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1472kB oom_score_adj:1000
+Nov 18 13:22:31 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:31 localhost kernel: CPU: 1 UID: 1000 PID: 3986 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:31 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:31 localhost kernel: Call Trace:
+Nov 18 13:22:31 localhost kernel:  <TASK>
+Nov 18 13:22:31 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:31 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:31 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:31 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:31 localhost kernel: [   3983]  1000  3983     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:31 localhost kernel: [   3985]  1000  3985   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:31 localhost kernel: [   3986]  1000  3986   230378    98090    97943      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:31 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3985,uid=1000
+Nov 18 13:22:31 localhost kernel: Out of memory: Killed process 3985 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:32 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:32 localhost kernel: CPU: 1 UID: 1000 PID: 3987 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:32 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:32 localhost kernel: Call Trace:
+Nov 18 13:22:32 localhost kernel:  <TASK>
+Nov 18 13:22:32 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:32 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:32 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:32 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:32 localhost kernel: [   3983]  1000  3983     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:32 localhost kernel: [   3986]  1000  3986   230378   147252   147105      130        17  1277952        0          1000 stress-ng-vm
+Nov 18 13:22:32 localhost kernel: [   3987]  1000  3987   230378   166051   165904      130        17  1425408        0          1000 stress-ng-vm
+Nov 18 13:22:32 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3987,uid=1000
+Nov 18 13:22:32 localhost kernel: Out of memory: Killed process 3987 (stress-ng-vm) total-vm:921512kB, anon-rss:663616kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1392kB oom_score_adj:1000
+Nov 18 13:22:32 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:32 localhost kernel: CPU: 0 UID: 1000 PID: 3986 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:32 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:32 localhost kernel: Call Trace:
+Nov 18 13:22:32 localhost kernel:  <TASK>
+Nov 18 13:22:32 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:32 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:32 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:32 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:32 localhost kernel: [   3983]  1000  3983     4413     1038      316      722         0    77824        0             0 sleep
+Nov 18 13:22:32 localhost kernel: [   3986]  1000  3986   230378   170026   169879      130        17  1458176        0          1000 stress-ng-vm
+Nov 18 13:22:32 localhost kernel: [   3988]  1000  3988   230378   143548   143401      130        17  1245184        0          1000 stress-ng-vm
+Nov 18 13:22:32 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3986,uid=1000
+Nov 18 13:22:32 localhost kernel: Out of memory: Killed process 3986 (stress-ng-vm) total-vm:921512kB, anon-rss:679516kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1424kB oom_score_adj:1000
+Nov 18 13:22:32 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:32 localhost kernel: CPU: 1 UID: 1000 PID: 3989 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:32 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:32 localhost kernel: Call Trace:
+Nov 18 13:22:32 localhost kernel:  <TASK>
+Nov 18 13:22:32 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:32 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:32 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:32 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:32 localhost kernel: [   3983]  1000  3983     4413     1039      316      723         0    77824        0             0 sleep
+Nov 18 13:22:32 localhost kernel: [   3988]  1000  3988   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:32 localhost kernel: [   3989]  1000  3989   230378    98000    97853      130        17   884736        0          1000 stress-ng-vm
+Nov 18 13:22:32 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3988,uid=1000
+Nov 18 13:22:32 localhost kernel: Out of memory: Killed process 3988 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:33 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:33 localhost kernel: CPU: 1 UID: 1000 PID: 3991 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:33 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:33 localhost kernel: Call Trace:
+Nov 18 13:22:33 localhost kernel:  <TASK>
+Nov 18 13:22:33 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:33 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:33 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:33 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:33 localhost kernel: [   3989]  1000  3989   230378   138053   137906      130        17  1204224        0          1000 stress-ng-vm
+Nov 18 13:22:33 localhost kernel: [   3991]  1000  3991   230378   175056   174909      130        17  1499136        0          1000 stress-ng-vm
+Nov 18 13:22:33 localhost kernel: [   3993]  1000  3993     4413     1041      316      725         0    77824        0             0 sleep
+Nov 18 13:22:33 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3991,uid=1000
+Nov 18 13:22:33 localhost kernel: Out of memory: Killed process 3991 (stress-ng-vm) total-vm:921512kB, anon-rss:699636kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1464kB oom_score_adj:1000
+Nov 18 13:22:33 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:33 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:33 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:33 localhost kernel: Call Trace:
+Nov 18 13:22:33 localhost kernel:  <TASK>
+Nov 18 13:22:33 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:33 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:33 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:33 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:33 localhost kernel: [   3989]  1000  3989   230378   175708   175561      130        17  1503232        0          1000 stress-ng-vm
+Nov 18 13:22:33 localhost kernel: [   3993]  1000  3993     4413     1041      316      725         0    77824        0             0 sleep
+Nov 18 13:22:33 localhost kernel: [   3994]  1000  3994   230378   137789   137642      130        17  1200128        0          1000 stress-ng-vm
+Nov 18 13:22:33 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3989,uid=1000
+Nov 18 13:22:33 localhost kernel: Out of memory: Killed process 3989 (stress-ng-vm) total-vm:921512kB, anon-rss:702244kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1468kB oom_score_adj:1000
+Nov 18 13:22:33 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:34 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:34 localhost kernel: CPU: 0 UID: 1000 PID: 3994 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:34 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:34 localhost kernel: Call Trace:
+Nov 18 13:22:34 localhost kernel:  <TASK>
+Nov 18 13:22:34 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:34 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:34 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:34 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:34 localhost kernel: [   3993]  1000  3993     4413     1041      316      725         0    77824        0             0 sleep
+Nov 18 13:22:34 localhost kernel: [   3994]  1000  3994   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:34 localhost kernel: [   3995]  1000  3995   230378    97618    97471      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:34 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3994,uid=1000
+Nov 18 13:22:34 localhost kernel: Out of memory: Killed process 3994 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:34 localhost kernel: Out of memory: Killed process 3996 (stress-ng-vm) total-vm:921512kB, anon-rss:650936kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1368kB oom_score_adj:1000
+Nov 18 13:22:34 localhost kernel: Out of memory: Killed process 3995 (stress-ng-vm) total-vm:921512kB, anon-rss:738204kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1540kB oom_score_adj:1000
+Nov 18 13:22:35 localhost kernel: oom_kill_process: 2 callbacks suppressed
+Nov 18 13:22:35 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:35 localhost kernel: CPU: 0 UID: 1000 PID: 3998 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:35 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:35 localhost kernel: Call Trace:
+Nov 18 13:22:35 localhost kernel:  <TASK>
+Nov 18 13:22:35 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:35 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:35 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:35 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:35 localhost kernel: [   3993]  1000  3993     4413     1041      316      725         0    77824        0             0 sleep
+Nov 18 13:22:35 localhost kernel: [   3997]  1000  3997   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:35 localhost kernel: [   3998]  1000  3998   230378    97761    97614      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:35 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3997,uid=1000
+Nov 18 13:22:35 localhost kernel: Out of memory: Killed process 3997 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:35 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:36 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:36 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:36 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:36 localhost kernel: Call Trace:
+Nov 18 13:22:36 localhost kernel:  <TASK>
+Nov 18 13:22:36 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:36 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:36 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:36 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:36 localhost kernel: [   3901]  1000  3901    15143      718      377      336         5    94208        0             0 stress-ng-vm
+Nov 18 13:22:36 localhost kernel: [   3998]  1000  3998   230378   188388   188241      130        17  1605632        0          1000 stress-ng-vm
+Nov 18 13:22:36 localhost kernel: [   3999]  1000  3999   230378   124674   124527      130        17  1097728        0          1000 stress-ng-vm
+Nov 18 13:22:36 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3998,uid=1000
+Nov 18 13:22:36 localhost kernel: Out of memory: Killed process 3998 (stress-ng-vm) total-vm:921512kB, anon-rss:752964kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1568kB oom_score_adj:1000
+Nov 18 13:22:37 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:37 localhost kernel: CPU: 0 UID: 1000 PID: 4003 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:37 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:37 localhost kernel: Call Trace:
+Nov 18 13:22:37 localhost kernel:  <TASK>
+Nov 18 13:22:37 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:37 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:37 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:37 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:37 localhost kernel: [   3999]  1000  3999   230378   215762   215612      132        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:37 localhost kernel: [   4002]  1000  4002     4413     1058      316      742         0    77824        0             0 sleep
+Nov 18 13:22:37 localhost kernel: [   4003]  1000  4003   230378    97169    97021      131        17   876544        0          1000 stress-ng-vm
+Nov 18 13:22:37 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=3999,uid=1000
+Nov 18 13:22:37 localhost kernel: Out of memory: Killed process 3999 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:528kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:37 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:37 localhost kernel: CPU: 0 UID: 1000 PID: 4004 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:37 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:37 localhost kernel: Call Trace:
+Nov 18 13:22:37 localhost kernel:  <TASK>
+Nov 18 13:22:37 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:37 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:37 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:37 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:37 localhost kernel: [   4002]  1000  4002     4413     1058      316      742         0    77824        0             0 sleep
+Nov 18 13:22:37 localhost kernel: [   4003]  1000  4003   230378   129697   129550      130        17  1134592        0          1000 stress-ng-vm
+Nov 18 13:22:37 localhost kernel: [   4004]  1000  4004   230378   183291   183144      130        17  1564672        0          1000 stress-ng-vm
+Nov 18 13:22:37 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4004,uid=1000
+Nov 18 13:22:37 localhost kernel: Out of memory: Killed process 4004 (stress-ng-vm) total-vm:921512kB, anon-rss:732576kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1528kB oom_score_adj:1000
+Nov 18 13:22:37 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:37 localhost kernel: CPU: 1 UID: 1000 PID: 4005 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:37 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:37 localhost kernel: Call Trace:
+Nov 18 13:22:37 localhost kernel:  <TASK>
+Nov 18 13:22:37 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:37 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:37 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:37 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:37 localhost kernel: [   4002]  1000  4002     4413     1058      316      742         0    77824        0             0 sleep
+Nov 18 13:22:37 localhost kernel: [   4003]  1000  4003   230378   172131   171984      130        17  1474560        0          1000 stress-ng-vm
+Nov 18 13:22:37 localhost kernel: [   4005]  1000  4005   230378   141521   141374      130        17  1232896        0          1000 stress-ng-vm
+Nov 18 13:22:37 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4003,uid=1000
+Nov 18 13:22:37 localhost kernel: Out of memory: Killed process 4003 (stress-ng-vm) total-vm:921512kB, anon-rss:687936kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1440kB oom_score_adj:1000
+Nov 18 13:22:38 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:38 localhost kernel: CPU: 1 UID: 1000 PID: 4006 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:38 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:38 localhost kernel: Call Trace:
+Nov 18 13:22:38 localhost kernel:  <TASK>
+Nov 18 13:22:38 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:38 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:38 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:38 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:38 localhost kernel: [   4002]  1000  4002     4413     1058      316      742         0    77824        0             0 sleep
+Nov 18 13:22:38 localhost kernel: [   4005]  1000  4005   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:38 localhost kernel: [   4006]  1000  4006   230378    97555    97408      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:38 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4005,uid=1000
+Nov 18 13:22:38 localhost kernel: Out of memory: Killed process 4005 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:39 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:39 localhost kernel: CPU: 0 UID: 1000 PID: 4007 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:39 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:39 localhost kernel: Call Trace:
+Nov 18 13:22:39 localhost kernel:  <TASK>
+Nov 18 13:22:39 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:39 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:39 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:39 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:39 localhost kernel: [   4002]  1000  4002     4413     1058      316      742         0    77824        0             0 sleep
+Nov 18 13:22:39 localhost kernel: [   4006]  1000  4006   230378   145617   145470      130        17  1265664        0          1000 stress-ng-vm
+Nov 18 13:22:39 localhost kernel: [   4007]  1000  4007   230378   167763   167616      130        17  1441792        0          1000 stress-ng-vm
+Nov 18 13:22:39 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4007,uid=1000
+Nov 18 13:22:39 localhost kernel: Out of memory: Killed process 4007 (stress-ng-vm) total-vm:921512kB, anon-rss:670464kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1408kB oom_score_adj:1000
+Nov 18 13:22:39 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:39 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:39 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:39 localhost kernel: Call Trace:
+Nov 18 13:22:39 localhost kernel:  <TASK>
+Nov 18 13:22:39 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:39 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:39 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:39 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:39 localhost kernel: [   4002]  1000  4002     4413     1058      316      742         0    77824        0             0 sleep
+Nov 18 13:22:39 localhost kernel: [   4006]  1000  4006   230378   168725   168578      130        17  1449984        0          1000 stress-ng-vm
+Nov 18 13:22:39 localhost kernel: [   4008]  1000  4008   230378   144593   144446      130        17  1257472        0          1000 stress-ng-vm
+Nov 18 13:22:39 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4006,uid=1000
+Nov 18 13:22:39 localhost kernel: Out of memory: Killed process 4006 (stress-ng-vm) total-vm:921512kB, anon-rss:674312kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1416kB oom_score_adj:1000
+Nov 18 13:22:39 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:40 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:40 localhost kernel: CPU: 0 UID: 1000 PID: 4008 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:40 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:40 localhost kernel: Call Trace:
+Nov 18 13:22:40 localhost kernel:  <TASK>
+Nov 18 13:22:40 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:40 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:40 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:40 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:40 localhost kernel: [   4008]  1000  4008   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:40 localhost kernel: [   4011]  1000  4011     4413     1033      316      717         0    73728        0             0 sleep
+Nov 18 13:22:40 localhost kernel: [   4012]  1000  4012   230378    97823    97676      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:40 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4008,uid=1000
+Nov 18 13:22:40 localhost kernel: Out of memory: Killed process 4008 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:41 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:41 localhost kernel: CPU: 0 UID: 1000 PID: 4013 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:41 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:41 localhost kernel: Call Trace:
+Nov 18 13:22:41 localhost kernel:  <TASK>
+Nov 18 13:22:41 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:41 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:41 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:41 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:41 localhost kernel: [   4011]  1000  4011     4413     1033      316      717         0    73728        0             0 sleep
+Nov 18 13:22:41 localhost kernel: [   4012]  1000  4012   230378   155130   154983      130        17  1339392        0          1000 stress-ng-vm
+Nov 18 13:22:41 localhost kernel: [   4013]  1000  4013   230378   157971   157824      130        17  1363968        0          1000 stress-ng-vm
+Nov 18 13:22:41 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4013,uid=1000
+Nov 18 13:22:41 localhost kernel: Out of memory: Killed process 4013 (stress-ng-vm) total-vm:921512kB, anon-rss:631296kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1332kB oom_score_adj:1000
+Nov 18 13:22:41 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:41 localhost kernel: CPU: 1 UID: 1000 PID: 4012 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:41 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:41 localhost kernel: Call Trace:
+Nov 18 13:22:41 localhost kernel:  <TASK>
+Nov 18 13:22:41 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:41 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:41 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:41 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:41 localhost kernel: [   4011]  1000  4011     4413     1033      316      717         0    73728        0             0 sleep
+Nov 18 13:22:41 localhost kernel: [   4012]  1000  4012   230378   181766   181619      130        17  1552384        0          1000 stress-ng-vm
+Nov 18 13:22:41 localhost kernel: [   4014]  1000  4014   230378   131706   131559      130        17  1150976        0          1000 stress-ng-vm
+Nov 18 13:22:41 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4012,uid=1000
+Nov 18 13:22:41 localhost kernel: Out of memory: Killed process 4012 (stress-ng-vm) total-vm:921512kB, anon-rss:726476kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1516kB oom_score_adj:1000
+Nov 18 13:22:42 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:42 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:42 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:42 localhost kernel: Call Trace:
+Nov 18 13:22:42 localhost kernel:  <TASK>
+Nov 18 13:22:42 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:42 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:42 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:42 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:42 localhost kernel: [   4011]  1000  4011     4413     1033      316      717         0    73728        0             0 sleep
+Nov 18 13:22:42 localhost kernel: [   4014]  1000  4014   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:42 localhost kernel: [   4015]  1000  4015   230378    97869    97722      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:42 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4014,uid=1000
+Nov 18 13:22:42 localhost kernel: Out of memory: Killed process 4014 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:42 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:42 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:42 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:42 localhost kernel: Call Trace:
+Nov 18 13:22:42 localhost kernel:  <TASK>
+Nov 18 13:22:42 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:42 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:42 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:42 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:42 localhost kernel: [   4011]  1000  4011     4413     1033      316      717         0    73728        0             0 sleep
+Nov 18 13:22:42 localhost kernel: [   4015]  1000  4015   230378   133526   133379      130        17  1167360        0          1000 stress-ng-vm
+Nov 18 13:22:42 localhost kernel: [   4016]  1000  4016   230378   179713   179566      130        17  1536000        0          1000 stress-ng-vm
+Nov 18 13:22:42 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4016,uid=1000
+Nov 18 13:22:42 localhost kernel: Out of memory: Killed process 4016 (stress-ng-vm) total-vm:921512kB, anon-rss:718264kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1500kB oom_score_adj:1000
+Nov 18 13:22:43 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:43 localhost kernel: CPU: 1 UID: 1000 PID: 4017 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:43 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:43 localhost kernel: Call Trace:
+Nov 18 13:22:43 localhost kernel:  <TASK>
+Nov 18 13:22:43 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:43 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:43 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:43 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:43 localhost kernel: [   4015]  1000  4015   230378   166553   166406      130        17  1429504        0          1000 stress-ng-vm
+Nov 18 13:22:43 localhost kernel: [   4017]  1000  4017   230378   147034   146887      130        17  1273856        0          1000 stress-ng-vm
+Nov 18 13:22:43 localhost kernel: [   4020]  1000  4020     4413     1020      314      706         0    81920        0             0 sleep
+Nov 18 13:22:43 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4015,uid=1000
+Nov 18 13:22:43 localhost kernel: Out of memory: Killed process 4015 (stress-ng-vm) total-vm:921512kB, anon-rss:665624kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1396kB oom_score_adj:1000
+Nov 18 13:22:43 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:43 localhost kernel: CPU: 0 UID: 1000 PID: 4021 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:43 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:43 localhost kernel: Call Trace:
+Nov 18 13:22:43 localhost kernel:  <TASK>
+Nov 18 13:22:43 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:43 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:43 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:43 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:43 localhost kernel: [   4017]  1000  4017   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:43 localhost kernel: [   4020]  1000  4020     4413     1054      316      738         0    81920        0             0 sleep
+Nov 18 13:22:43 localhost kernel: [   4021]  1000  4021   230378    97466    97319      130        17   876544        0          1000 stress-ng-vm
+Nov 18 13:22:43 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4017,uid=1000
+Nov 18 13:22:43 localhost kernel: Out of memory: Killed process 4017 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:44 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:44 localhost kernel: CPU: 1 UID: 1000 PID: 4022 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:44 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:44 localhost kernel: Call Trace:
+Nov 18 13:22:44 localhost kernel:  <TASK>
+Nov 18 13:22:44 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:44 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:44 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:44 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:44 localhost kernel: [   4020]  1000  4020     4413     1054      316      738         0    81920        0             0 sleep
+Nov 18 13:22:44 localhost kernel: [   4021]  1000  4021   230378   164362   164215      130        17  1413120        0          1000 stress-ng-vm
+Nov 18 13:22:44 localhost kernel: [   4022]  1000  4022   230378   148881   148734      130        17  1290240        0          1000 stress-ng-vm
+Nov 18 13:22:44 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4021,uid=1000
+Nov 18 13:22:44 localhost kernel: Out of memory: Killed process 4021 (stress-ng-vm) total-vm:921512kB, anon-rss:656860kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1380kB oom_score_adj:1000
+Nov 18 13:22:44 localhost kernel: kworker/1:0 invoked oom-killer: gfp_mask=0xdc0(GFP_KERNEL|__GFP_ZERO), order=0, oom_score_adj=0
+Nov 18 13:22:44 localhost kernel: CPU: 1 UID: 0 PID: 3765 Comm: kworker/1:0 Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:44 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:44 localhost kernel: Workqueue: events drm_fb_helper_damage_work
+Nov 18 13:22:44 localhost kernel: Call Trace:
+Nov 18 13:22:44 localhost kernel:  <TASK>
+Nov 18 13:22:44 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:44 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:44 localhost kernel:  dump_stack+0x10/0x18
+--
+Nov 18 13:22:44 localhost kernel: [   4020]  1000  4020     4413     1054      316      738         0    81920        0             0 sleep
+Nov 18 13:22:44 localhost kernel: [   4022]  1000  4022   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:44 localhost kernel: [   4023]  1000  4023   230378    97641    97494      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:44 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4022,uid=1000
+Nov 18 13:22:44 localhost kernel: Out of memory: Killed process 4022 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:44 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:45 localhost kernel: CPU: 0 UID: 1000 PID: 4024 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:45 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:45 localhost kernel: Call Trace:
+Nov 18 13:22:45 localhost kernel:  <TASK>
+Nov 18 13:22:45 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:45 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:45 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:45 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:45 localhost kernel: [   4020]  1000  4020     4413     1054      316      738         0    81920        0             0 sleep
+Nov 18 13:22:45 localhost kernel: [   4023]  1000  4023   230378   142399   142252      130        17  1236992        0          1000 stress-ng-vm
+Nov 18 13:22:45 localhost kernel: [   4024]  1000  4024   230378   171152   171005      130        17  1466368        0          1000 stress-ng-vm
+Nov 18 13:22:45 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4024,uid=1000
+Nov 18 13:22:45 localhost kernel: Out of memory: Killed process 4024 (stress-ng-vm) total-vm:921512kB, anon-rss:684020kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1432kB oom_score_adj:1000
+Nov 18 13:22:45 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:45 localhost kernel: CPU: 0 UID: 1000 PID: 4023 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:45 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:45 localhost kernel: Call Trace:
+Nov 18 13:22:45 localhost kernel:  <TASK>
+Nov 18 13:22:45 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:45 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:45 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:45 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:45 localhost kernel: [   4020]  1000  4020     4413     1054      316      738         0    81920        0             0 sleep
+Nov 18 13:22:45 localhost kernel: [   4023]  1000  4023   230378   191764   191617      130        17  1634304        0          1000 stress-ng-vm
+Nov 18 13:22:45 localhost kernel: [   4025]  1000  4025   230378   120909   120762      130        17  1064960        0          1000 stress-ng-vm
+Nov 18 13:22:45 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4023,uid=1000
+Nov 18 13:22:45 localhost kernel: Out of memory: Killed process 4023 (stress-ng-vm) total-vm:921512kB, anon-rss:766468kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1596kB oom_score_adj:1000
+Nov 18 13:22:45 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:46 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:46 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:46 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:46 localhost kernel: Call Trace:
+Nov 18 13:22:46 localhost kernel:  <TASK>
+Nov 18 13:22:46 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:46 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:46 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:46 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:46 localhost kernel: [   4020]  1000  4020     4413     1054      316      738         0    81920        0             0 sleep
+Nov 18 13:22:46 localhost kernel: [   4025]  1000  4025   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:46 localhost kernel: [   4026]  1000  4026   230378    97784    97637      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:46 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4025,uid=1000
+Nov 18 13:22:46 localhost kernel: Out of memory: Killed process 4025 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:46 localhost kernel: kworker/1:0 invoked oom-killer: gfp_mask=0xdc0(GFP_KERNEL|__GFP_ZERO), order=0, oom_score_adj=0
+Nov 18 13:22:46 localhost kernel: CPU: 1 UID: 0 PID: 3765 Comm: kworker/1:0 Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:46 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:46 localhost kernel: Workqueue: events drm_fb_helper_damage_work
+Nov 18 13:22:46 localhost kernel: Call Trace:
+Nov 18 13:22:46 localhost kernel:  <TASK>
+Nov 18 13:22:46 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:46 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:46 localhost kernel:  dump_stack+0x10/0x18
+--
+Nov 18 13:22:46 localhost kernel: [   4026]  1000  4026   230378   137952   137805      130        17  1204224        0          1000 stress-ng-vm
+Nov 18 13:22:46 localhost kernel: [   4028]  1000  4028   230378   174799   174652      130        17  1499136        0          1000 stress-ng-vm
+Nov 18 13:22:46 localhost kernel: [   4030]  1000  4030     4413     1036      316      720         0    73728        0             0 sleep
+Nov 18 13:22:46 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4028,uid=1000
+Nov 18 13:22:46 localhost kernel: Out of memory: Killed process 4028 (stress-ng-vm) total-vm:921512kB, anon-rss:698608kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1464kB oom_score_adj:1000
+Nov 18 13:22:47 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:47 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:47 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:47 localhost kernel: Call Trace:
+Nov 18 13:22:47 localhost kernel:  <TASK>
+Nov 18 13:22:47 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:47 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:47 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:47 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:47 localhost kernel: [   4026]  1000  4026   230378   176892   176745      130        17  1515520        0          1000 stress-ng-vm
+Nov 18 13:22:47 localhost kernel: [   4030]  1000  4030     4413     1036      316      720         0    73728        0             0 sleep
+Nov 18 13:22:47 localhost kernel: [   4031]  1000  4031   230378   136442   136295      130        17  1191936        0          1000 stress-ng-vm
+Nov 18 13:22:47 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4026,uid=1000
+Nov 18 13:22:47 localhost kernel: Out of memory: Killed process 4026 (stress-ng-vm) total-vm:921512kB, anon-rss:706980kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1480kB oom_score_adj:1000
+Nov 18 13:22:48 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:48 localhost kernel: CPU: 1 UID: 1000 PID: 4032 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:48 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:48 localhost kernel: Call Trace:
+Nov 18 13:22:48 localhost kernel:  <TASK>
+Nov 18 13:22:48 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:48 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:48 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:48 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:48 localhost kernel: [   4030]  1000  4030     4413     1036      316      720         0    73728        0             0 sleep
+Nov 18 13:22:48 localhost kernel: [   4031]  1000  4031   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:48 localhost kernel: [   4032]  1000  4032   230378    97588    97441      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:48 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4031,uid=1000
+Nov 18 13:22:48 localhost kernel: Out of memory: Killed process 4031 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:48 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:48 localhost kernel: CPU: 1 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:48 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:48 localhost kernel: Call Trace:
+Nov 18 13:22:48 localhost kernel:  <TASK>
+Nov 18 13:22:48 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:48 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:48 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:48 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:48 localhost kernel: [   4030]  1000  4030     4413     1036      316      720         0    73728        0             0 sleep
+Nov 18 13:22:48 localhost kernel: [   4032]  1000  4032   230378   156899   156752      130        17  1355776        0          1000 stress-ng-vm
+Nov 18 13:22:48 localhost kernel: [   4033]  1000  4033   230378   156294   156147      130        17  1347584        0          1000 stress-ng-vm
+Nov 18 13:22:48 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4032,uid=1000
+Nov 18 13:22:48 localhost kernel: Out of memory: Killed process 4032 (stress-ng-vm) total-vm:921512kB, anon-rss:627008kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1324kB oom_score_adj:1000
+Nov 18 13:22:49 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:49 localhost kernel: CPU: 1 UID: 1000 PID: 4034 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:49 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:49 localhost kernel: Call Trace:
+Nov 18 13:22:49 localhost kernel:  <TASK>
+Nov 18 13:22:49 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:49 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:49 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:49 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:49 localhost kernel: [   4030]  1000  4030     4413     1036      316      720         0    73728        0             0 sleep
+Nov 18 13:22:49 localhost kernel: [   4033]  1000  4033   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:49 localhost kernel: [   4034]  1000  4034   230378    97703    97556      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:49 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4033,uid=1000
+Nov 18 13:22:49 localhost kernel: Out of memory: Killed process 4033 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:49 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:49 localhost kernel: CPU: 0 UID: 1000 PID: 4035 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:49 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:49 localhost kernel: Call Trace:
+Nov 18 13:22:49 localhost kernel:  <TASK>
+Nov 18 13:22:49 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:49 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:49 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:49 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:49 localhost kernel: [   4030]  1000  4030     4413     1036      316      720         0    73728        0             0 sleep
+Nov 18 13:22:49 localhost kernel: [   4034]  1000  4034   230378   139789   139642      130        17  1216512        0          1000 stress-ng-vm
+Nov 18 13:22:49 localhost kernel: [   4035]  1000  4035   230378   173141   172994      130        17  1482752        0          1000 stress-ng-vm
+Nov 18 13:22:49 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4035,uid=1000
+Nov 18 13:22:49 localhost kernel: Out of memory: Killed process 4035 (stress-ng-vm) total-vm:921512kB, anon-rss:691976kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1448kB oom_score_adj:1000
+Nov 18 13:22:49 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:49 localhost kernel: CPU: 1 UID: 1000 PID: 4036 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:49 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:49 localhost kernel: Call Trace:
+Nov 18 13:22:49 localhost kernel:  <TASK>
+Nov 18 13:22:49 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:49 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:49 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:49 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:49 localhost kernel: [   4034]  1000  4034   230378   170372   170225      130        17  1462272        0          1000 stress-ng-vm
+Nov 18 13:22:49 localhost kernel: [   4036]  1000  4036   230378   143005   142858      130        17  1241088        0          1000 stress-ng-vm
+Nov 18 13:22:49 localhost kernel: [   4039]  1000  4039     4413     1056      316      740         0    69632        0             0 sleep
+Nov 18 13:22:49 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4034,uid=1000
+Nov 18 13:22:49 localhost kernel: Out of memory: Killed process 4034 (stress-ng-vm) total-vm:921512kB, anon-rss:680900kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1428kB oom_score_adj:1000
+Nov 18 13:22:50 localhost kernel: perf: interrupt took too long (23592 > 23421), lowering kernel.perf_event_max_sample_rate to 8000
+Nov 18 13:22:51 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:51 localhost kernel: CPU: 1 UID: 1000 PID: 4040 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:52 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:52 localhost kernel: Call Trace:
+Nov 18 13:22:52 localhost kernel:  <TASK>
+Nov 18 13:22:52 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:52 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:52 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:52 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:52 localhost kernel: [   4036]  1000  4036   230378    97679    97531      130        18   884736        0          1000 stress-ng-vm
+Nov 18 13:22:52 localhost kernel: [   4039]  1000  4039     4413     1056      316      740         0    69632        0             0 sleep
+Nov 18 13:22:52 localhost kernel: [   4040]  1000  4040   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:52 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4040,uid=1000
+Nov 18 13:22:52 localhost kernel: Out of memory: Killed process 4040 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:53 localhost kernel: sleep invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:53 localhost kernel: CPU: 0 UID: 1000 PID: 4039 Comm: sleep Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:53 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:53 localhost kernel: Call Trace:
+Nov 18 13:22:53 localhost kernel:  <TASK>
+Nov 18 13:22:53 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:53 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:53 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:53 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:53 localhost kernel: [   4036]  1000  4036   230378   195862   195714      130        18  1671168        0          1000 stress-ng-vm
+Nov 18 13:22:53 localhost kernel: [   4039]  1000  4039     4413     1056      316      740         0    69632        0             0 sleep
+Nov 18 13:22:53 localhost kernel: [   4041]  1000  4041   230378   117476   117329      130        17  1040384        0          1000 stress-ng-vm
+Nov 18 13:22:53 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4036,uid=1000
+Nov 18 13:22:53 localhost kernel: Out of memory: Killed process 4036 (stress-ng-vm) total-vm:921512kB, anon-rss:782856kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1632kB oom_score_adj:1000
+Nov 18 13:22:54 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:54 localhost kernel: CPU: 1 UID: 1000 PID: 4045 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:54 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:54 localhost kernel: Call Trace:
+Nov 18 13:22:54 localhost kernel:  <TASK>
+Nov 18 13:22:54 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:54 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:54 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:54 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:54 localhost kernel: [   4041]  1000  4041   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:54 localhost kernel: [   4044]  1000  4044     4413     1045      315      730         0    77824        0             0 sleep
+Nov 18 13:22:54 localhost kernel: [   4045]  1000  4045   230378    95947    95800      130        17   864256        0          1000 stress-ng-vm
+Nov 18 13:22:54 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4041,uid=1000
+Nov 18 13:22:54 localhost kernel: Out of memory: Killed process 4041 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:54 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:54 localhost kernel: CPU: 1 UID: 1000 PID: 4045 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:54 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:54 localhost kernel: Call Trace:
+Nov 18 13:22:54 localhost kernel:  <TASK>
+Nov 18 13:22:54 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:54 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:54 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:54 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:54 localhost kernel: [   4044]  1000  4044     4413     1045      315      730         0    77824        0             0 sleep
+Nov 18 13:22:54 localhost kernel: [   4045]  1000  4045   230378   206027   205880      130        17  1744896        0          1000 stress-ng-vm
+Nov 18 13:22:54 localhost kernel: [   4046]  1000  4046   230378   107225   107078      130        17   958464        0          1000 stress-ng-vm
+Nov 18 13:22:54 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4045,uid=1000
+Nov 18 13:22:54 localhost kernel: Out of memory: Killed process 4045 (stress-ng-vm) total-vm:921512kB, anon-rss:823520kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1704kB oom_score_adj:1000
+Nov 18 13:22:55 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:55 localhost kernel: CPU: 1 UID: 1000 PID: 4047 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:55 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:55 localhost kernel: Call Trace:
+Nov 18 13:22:55 localhost kernel:  <TASK>
+Nov 18 13:22:55 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:55 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:55 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:55 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:55 localhost kernel: [   4044]  1000  4044     4413     1045      315      730         0    77824        0             0 sleep
+Nov 18 13:22:55 localhost kernel: [   4046]  1000  4046   230378   142634   142487      130        17  1241088        0          1000 stress-ng-vm
+Nov 18 13:22:55 localhost kernel: [   4047]  1000  4047   230378   170865   170718      130        17  1466368        0          1000 stress-ng-vm
+Nov 18 13:22:55 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4047,uid=1000
+Nov 18 13:22:55 localhost kernel: Out of memory: Killed process 4047 (stress-ng-vm) total-vm:921512kB, anon-rss:682872kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1432kB oom_score_adj:1000
+Nov 18 13:22:55 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:55 localhost kernel: CPU: 0 UID: 1000 PID: 4046 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:55 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:55 localhost kernel: Call Trace:
+Nov 18 13:22:55 localhost kernel:  <TASK>
+Nov 18 13:22:55 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:55 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:55 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:55 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:55 localhost kernel: [   4044]  1000  4044     4413     1045      315      730         0    77824        0             0 sleep
+Nov 18 13:22:55 localhost kernel: [   4046]  1000  4046   230378   186362   186215      130        17  1589248        0          1000 stress-ng-vm
+Nov 18 13:22:55 localhost kernel: [   4049]  1000  4049   230378   127184   127037      130        17  1118208        0          1000 stress-ng-vm
+Nov 18 13:22:55 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4046,uid=1000
+Nov 18 13:22:55 localhost kernel: Out of memory: Killed process 4046 (stress-ng-vm) total-vm:921512kB, anon-rss:744860kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1552kB oom_score_adj:1000
+Nov 18 13:22:57 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:22:57 localhost kernel: CPU: 1 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:57 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:57 localhost kernel: Call Trace:
+Nov 18 13:22:57 localhost kernel:  <TASK>
+Nov 18 13:22:57 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:57 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:57 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:57 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:57 localhost kernel: [   4044]  1000  4044     4413     1046      315      731         0    77824        0             0 sleep
+Nov 18 13:22:57 localhost kernel: [   4049]  1000  4049   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:57 localhost kernel: [   4050]  1000  4050   230378    97754    97607      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:22:57 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4049,uid=1000
+Nov 18 13:22:57 localhost kernel: Out of memory: Killed process 4049 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:57 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:57 localhost kernel: CPU: 1 UID: 1000 PID: 4050 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:57 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:57 localhost kernel: Call Trace:
+Nov 18 13:22:57 localhost kernel:  <TASK>
+Nov 18 13:22:57 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:57 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:57 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:57 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:57 localhost kernel: [   4050]  1000  4050   230378   136663   136516      130        17  1191936        0          1000 stress-ng-vm
+Nov 18 13:22:57 localhost kernel: [   4052]  1000  4052   230378   175914   175767      130        17  1507328        0          1000 stress-ng-vm
+Nov 18 13:22:57 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:22:57 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4052,uid=1000
+Nov 18 13:22:57 localhost kernel: Out of memory: Killed process 4052 (stress-ng-vm) total-vm:921512kB, anon-rss:703068kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1472kB oom_score_adj:1000
+Nov 18 13:22:57 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:57 localhost kernel: CPU: 0 UID: 1000 PID: 4050 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:57 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:57 localhost kernel: Call Trace:
+Nov 18 13:22:57 localhost kernel:  <TASK>
+Nov 18 13:22:57 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:57 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:57 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:57 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:57 localhost kernel: [   4050]  1000  4050   230378   179061   178914      130        17  1531904        0          1000 stress-ng-vm
+Nov 18 13:22:57 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:22:57 localhost kernel: [   4056]  1000  4056   230378   133720   133573      130        17  1167360        0          1000 stress-ng-vm
+Nov 18 13:22:57 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4050,uid=1000
+Nov 18 13:22:57 localhost kernel: Out of memory: Killed process 4050 (stress-ng-vm) total-vm:921512kB, anon-rss:715656kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1496kB oom_score_adj:1000
+Nov 18 13:22:57 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:22:58 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:58 localhost kernel: CPU: 0 UID: 1000 PID: 4057 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:58 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:58 localhost kernel: Call Trace:
+Nov 18 13:22:58 localhost kernel:  <TASK>
+Nov 18 13:22:58 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:58 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:58 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:58 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:58 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:22:58 localhost kernel: [   4056]  1000  4056   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:58 localhost kernel: [   4057]  1000  4057   230378    97349    97202      130        17   876544        0          1000 stress-ng-vm
+Nov 18 13:22:58 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4056,uid=1000
+Nov 18 13:22:58 localhost kernel: Out of memory: Killed process 4056 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:22:58 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:59 localhost kernel: CPU: 1 UID: 1000 PID: 4058 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:59 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:59 localhost kernel: Call Trace:
+Nov 18 13:22:59 localhost kernel:  <TASK>
+Nov 18 13:22:59 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:59 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:59 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:59 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:59 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:22:59 localhost kernel: [   4057]  1000  4057   230378   136969   136822      130        17  1196032        0          1000 stress-ng-vm
+Nov 18 13:22:59 localhost kernel: [   4058]  1000  4058   230378   175832   175685      130        17  1507328        0          1000 stress-ng-vm
+Nov 18 13:22:59 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4058,uid=1000
+Nov 18 13:22:59 localhost kernel: Out of memory: Killed process 4058 (stress-ng-vm) total-vm:921512kB, anon-rss:702740kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1472kB oom_score_adj:1000
+Nov 18 13:22:59 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:22:59 localhost kernel: CPU: 0 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:59 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:59 localhost kernel: Call Trace:
+Nov 18 13:22:59 localhost kernel:  <TASK>
+Nov 18 13:22:59 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:59 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:59 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:59 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:59 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:22:59 localhost kernel: [   4057]  1000  4057   230378   165431   165284      130        17  1421312        0          1000 stress-ng-vm
+Nov 18 13:22:59 localhost kernel: [   4059]  1000  4059   230378   146400   146253      130        17  1269760        0          1000 stress-ng-vm
+Nov 18 13:22:59 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4057,uid=1000
+Nov 18 13:22:59 localhost kernel: Out of memory: Killed process 4057 (stress-ng-vm) total-vm:921512kB, anon-rss:661136kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1388kB oom_score_adj:1000
+Nov 18 13:22:59 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:22:59 localhost kernel: CPU: 1 UID: 1000 PID: 4059 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:22:59 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:22:59 localhost kernel: Call Trace:
+Nov 18 13:22:59 localhost kernel:  <TASK>
+Nov 18 13:22:59 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:22:59 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:22:59 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:22:59 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:22:59 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:22:59 localhost kernel: [   4059]  1000  4059   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:22:59 localhost kernel: [   4060]  1000  4060   230378    95853    95706      130        17   864256        0          1000 stress-ng-vm
+Nov 18 13:22:59 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4059,uid=1000
+Nov 18 13:22:59 localhost kernel: Out of memory: Killed process 4059 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:00 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:00 localhost kernel: CPU: 1 UID: 1000 PID: 4061 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:00 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:00 localhost kernel: Call Trace:
+Nov 18 13:23:00 localhost kernel:  <TASK>
+Nov 18 13:23:00 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:00 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:00 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:00 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:00 localhost kernel: [   4054]  1000  4054     4413     1055      315      740         0    77824        0             0 sleep
+Nov 18 13:23:00 localhost kernel: [   4060]  1000  4060   230378   140830   140683      130        17  1224704        0          1000 stress-ng-vm
+Nov 18 13:23:00 localhost kernel: [   4061]  1000  4061   230378   172243   172096      130        17  1478656        0          1000 stress-ng-vm
+Nov 18 13:23:00 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4061,uid=1000
+Nov 18 13:23:00 localhost kernel: Out of memory: Killed process 4061 (stress-ng-vm) total-vm:921512kB, anon-rss:688384kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1444kB oom_score_adj:1000
+Nov 18 13:23:00 localhost kernel: bash invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:23:00 localhost kernel: CPU: 0 UID: 1000 PID: 2320 Comm: bash Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:00 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:00 localhost kernel: Call Trace:
+Nov 18 13:23:00 localhost kernel:  <TASK>
+Nov 18 13:23:00 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:00 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:00 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:00 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:00 localhost kernel: [   3901]  1000  3901    15143      718      377      336         5    94208        0             0 stress-ng-vm
+Nov 18 13:23:00 localhost kernel: [   4060]  1000  4060   230378   182994   182847      130        17  1564672        0          1000 stress-ng-vm
+Nov 18 13:23:00 localhost kernel: [   4062]  1000  4062   230378   130873   130726      130        17  1146880        0          1000 stress-ng-vm
+Nov 18 13:23:00 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4060,uid=1000
+Nov 18 13:23:00 localhost kernel: Out of memory: Killed process 4060 (stress-ng-vm) total-vm:921512kB, anon-rss:731388kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1528kB oom_score_adj:1000
+Nov 18 13:23:01 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:23:01 localhost kernel: CPU: 0 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:01 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:01 localhost kernel: Call Trace:
+Nov 18 13:23:01 localhost kernel:  <TASK>
+Nov 18 13:23:01 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:01 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:01 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:01 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:01 localhost kernel: [   4062]  1000  4062   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:23:01 localhost kernel: [   4065]  1000  4065     4413     1038      316      722         0    73728        0             0 sleep
+Nov 18 13:23:01 localhost kernel: [   4066]  1000  4066   230378    97756    97609      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:23:01 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4062,uid=1000
+Nov 18 13:23:01 localhost kernel: Out of memory: Killed process 4062 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:01 localhost kernel: Out of memory: Killed process 4067 (stress-ng-vm) total-vm:921512kB, anon-rss:739292kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1540kB oom_score_adj:1000
+Nov 18 13:23:01 localhost systemd-journald[700]: Under memory pressure, flushing caches.
+Nov 18 13:23:02 localhost kernel: oom_kill_process: 1 callbacks suppressed
+Nov 18 13:23:02 localhost kernel: cron invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:23:02 localhost kernel: CPU: 0 UID: 0 PID: 1292 Comm: cron Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:02 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:02 localhost kernel: Call Trace:
+Nov 18 13:23:02 localhost kernel:  <TASK>
+Nov 18 13:23:02 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:02 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:02 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:02 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:02 localhost kernel: [   4065]  1000  4065     4413     1038      316      722         0    73728        0             0 sleep
+Nov 18 13:23:02 localhost kernel: [   4066]  1000  4066   230378   154045   153898      130        17  1331200        0          1000 stress-ng-vm
+Nov 18 13:23:02 localhost kernel: [   4068]  1000  4068   230378   159431   159284      130        17  1372160        0          1000 stress-ng-vm
+Nov 18 13:23:02 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4068,uid=1000
+Nov 18 13:23:02 localhost kernel: Out of memory: Killed process 4068 (stress-ng-vm) total-vm:921512kB, anon-rss:637136kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1340kB oom_score_adj:1000
+Nov 18 13:23:02 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:02 localhost kernel: CPU: 0 UID: 1000 PID: 4069 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:02 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:02 localhost kernel: Call Trace:
+Nov 18 13:23:02 localhost kernel:  <TASK>
+Nov 18 13:23:02 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:02 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:02 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:02 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:02 localhost kernel: [   4065]  1000  4065     4413     1038      316      722         0    73728        0             0 sleep
+Nov 18 13:23:02 localhost kernel: [   4066]  1000  4066   230378   191075   190928      130        17  1626112        0          1000 stress-ng-vm
+Nov 18 13:23:02 localhost kernel: [   4069]  1000  4069   230378   119503   119356      130        17  1052672        0          1000 stress-ng-vm
+Nov 18 13:23:02 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4066,uid=1000
+Nov 18 13:23:02 localhost kernel: Out of memory: Killed process 4066 (stress-ng-vm) total-vm:921512kB, anon-rss:763712kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1588kB oom_score_adj:1000
+Nov 18 13:23:03 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:03 localhost kernel: CPU: 0 UID: 1000 PID: 4069 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:03 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:03 localhost kernel: Call Trace:
+Nov 18 13:23:03 localhost kernel:  <TASK>
+Nov 18 13:23:03 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:03 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:03 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:03 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:03 localhost kernel: [   4065]  1000  4065     4413     1038      316      722         0    73728        0             0 sleep
+Nov 18 13:23:03 localhost kernel: [   4069]  1000  4069   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: [   4070]  1000  4070   230378    97788    97641      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4069,uid=1000
+Nov 18 13:23:03 localhost kernel: Out of memory: Killed process 4069 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:03 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:03 localhost kernel: CPU: 1 UID: 1000 PID: 4070 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:03 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:03 localhost kernel: Call Trace:
+Nov 18 13:23:03 localhost kernel:  <TASK>
+Nov 18 13:23:03 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:03 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:03 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:03 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:03 localhost kernel: [   4065]  1000  4065     4413     1038      316      722         0    73728        0             0 sleep
+Nov 18 13:23:03 localhost kernel: [   4070]  1000  4070   230378   113790   113643      130        17  1007616        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: [   4071]  1000  4071   230378   199370   199223      130        17  1691648        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4071,uid=1000
+Nov 18 13:23:03 localhost kernel: Out of memory: Killed process 4071 (stress-ng-vm) total-vm:921512kB, anon-rss:796892kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1652kB oom_score_adj:1000
+Nov 18 13:23:03 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:03 localhost kernel: CPU: 1 UID: 1000 PID: 4070 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:03 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:03 localhost kernel: Call Trace:
+Nov 18 13:23:03 localhost kernel:  <TASK>
+Nov 18 13:23:03 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:03 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:03 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:03 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:03 localhost kernel: [   4065]  1000  4065     4413     1038      316      722         0    73728        0             0 sleep
+Nov 18 13:23:03 localhost kernel: [   4070]  1000  4070   230378   141268   141121      130        17  1228800        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: [   4072]  1000  4072   230378   171992   171845      130        17  1474560        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4072,uid=1000
+Nov 18 13:23:03 localhost kernel: Out of memory: Killed process 4072 (stress-ng-vm) total-vm:921512kB, anon-rss:687380kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1440kB oom_score_adj:1000
+Nov 18 13:23:03 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:03 localhost kernel: CPU: 0 UID: 1000 PID: 4073 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:03 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:03 localhost kernel: Call Trace:
+Nov 18 13:23:03 localhost kernel:  <TASK>
+Nov 18 13:23:03 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:03 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:03 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:03 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:03 localhost kernel: [   4070]  1000  4070   230378   183967   183820      130        17  1568768        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: [   4073]  1000  4073   230378   129549   129402      130        17  1134592        0          1000 stress-ng-vm
+Nov 18 13:23:03 localhost kernel: [   4074]  1000  4074     2211      602      418      184         0    69632        0             0 bash
+Nov 18 13:23:03 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4070,uid=1000
+Nov 18 13:23:03 localhost kernel: Out of memory: Killed process 4070 (stress-ng-vm) total-vm:921512kB, anon-rss:735280kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1532kB oom_score_adj:1000
+Nov 18 13:23:04 localhost kernel: systemd-journal invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=-250
+Nov 18 13:23:04 localhost kernel: CPU: 1 UID: 0 PID: 700 Comm: systemd-journal Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:04 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:04 localhost kernel: Call Trace:
+Nov 18 13:23:04 localhost kernel:  <TASK>
+Nov 18 13:23:04 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:04 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:04 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:04 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:04 localhost kernel: [   4073]  1000  4073   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:23:04 localhost kernel: [   4076]  1000  4076     4413     1051      315      736         0    81920        0             0 sleep
+Nov 18 13:23:04 localhost kernel: [   4077]  1000  4077   230378    97488    97341      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:23:04 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4073,uid=1000
+Nov 18 13:23:04 localhost kernel: Out of memory: Killed process 4073 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:04 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:04 localhost kernel: CPU: 1 UID: 1000 PID: 4077 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:04 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:04 localhost kernel: Call Trace:
+Nov 18 13:23:04 localhost kernel:  <TASK>
+Nov 18 13:23:04 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:04 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:04 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:04 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:04 localhost kernel: [   4076]  1000  4076     4413     1051      315      736         0    81920        0             0 sleep
+Nov 18 13:23:04 localhost kernel: [   4077]  1000  4077   230378   128497   128350      130        17  1126400        0          1000 stress-ng-vm
+Nov 18 13:23:04 localhost kernel: [   4078]  1000  4078   230378   185173   185026      130        17  1581056        0          1000 stress-ng-vm
+Nov 18 13:23:04 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4078,uid=1000
+Nov 18 13:23:04 localhost kernel: Out of memory: Killed process 4078 (stress-ng-vm) total-vm:921512kB, anon-rss:740104kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1544kB oom_score_adj:1000
+Nov 18 13:23:05 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:05 localhost kernel: CPU: 0 UID: 1000 PID: 4077 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:05 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:05 localhost kernel: Call Trace:
+Nov 18 13:23:05 localhost kernel:  <TASK>
+Nov 18 13:23:05 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:05 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:05 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:05 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:05 localhost kernel: [   4076]  1000  4076     4413     1051      315      736         0    81920        0             0 sleep
+Nov 18 13:23:05 localhost kernel: [   4077]  1000  4077   230378   198864   198717      130        17  1691648        0          1000 stress-ng-vm
+Nov 18 13:23:05 localhost kernel: [   4079]  1000  4079   230378   114001   113854      130        17  1011712        0          1000 stress-ng-vm
+Nov 18 13:23:05 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4077,uid=1000
+Nov 18 13:23:05 localhost kernel: Out of memory: Killed process 4077 (stress-ng-vm) total-vm:921512kB, anon-rss:794868kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1652kB oom_score_adj:1000
+Nov 18 13:23:06 localhost kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 18 13:23:06 localhost kernel: CPU: 1 UID: 1000 PID: 4080 Comm: stress-ng-vm Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:06 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:06 localhost kernel: Call Trace:
+Nov 18 13:23:06 localhost kernel:  <TASK>
+Nov 18 13:23:06 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:06 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:06 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:06 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:06 localhost kernel: [   4076]  1000  4076     4413     1051      315      736         0    81920        0             0 sleep
+Nov 18 13:23:06 localhost kernel: [   4079]  1000  4079   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:23:06 localhost kernel: [   4080]  1000  4080   230378    97744    97597      130        17   880640        0          1000 stress-ng-vm
+Nov 18 13:23:06 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4079,uid=1000
+Nov 18 13:23:06 localhost kernel: Out of memory: Killed process 4079 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:06 localhost kernel: Out of memory: Killed process 4081 (stress-ng-vm) total-vm:921512kB, anon-rss:646504kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1360kB oom_score_adj:1000
+Nov 18 13:23:06 localhost kernel: Out of memory: Killed process 4080 (stress-ng-vm) total-vm:921512kB, anon-rss:810004kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1680kB oom_score_adj:1000
+Nov 18 13:23:07 localhost kernel: oom_kill_process: 2 callbacks suppressed
+Nov 18 13:23:07 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:23:07 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:07 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:07 localhost kernel: Call Trace:
+Nov 18 13:23:07 localhost kernel:  <TASK>
+Nov 18 13:23:07 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:07 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:07 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:07 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:07 localhost kernel: [   4082]  1000  4082   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:23:07 localhost kernel: [   4083]  1000  4083   230378    97287    97140      130        17   876544        0          1000 stress-ng-vm
+Nov 18 13:23:07 localhost kernel: [   4086]  1000  4086     4413     1003      289      714         0    73728        0             0 sleep
+Nov 18 13:23:07 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4082,uid=1000
+Nov 18 13:23:07 localhost kernel: Out of memory: Killed process 4082 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:07 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:23:07 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:07 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:07 localhost kernel: Call Trace:
+Nov 18 13:23:07 localhost kernel:  <TASK>
+Nov 18 13:23:07 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:07 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:07 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:07 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:07 localhost kernel: [   4083]  1000  4083   230378   134407   134260      130        17  1175552        0          1000 stress-ng-vm
+Nov 18 13:23:07 localhost kernel: [   4086]  1000  4086     4413     1062      316      746         0    73728        0             0 sleep
+Nov 18 13:23:07 localhost kernel: [   4087]  1000  4087   230378   179039   178892      130        17  1531904        0          1000 stress-ng-vm
+Nov 18 13:23:07 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4087,uid=1000
+Nov 18 13:23:07 localhost kernel: Out of memory: Killed process 4087 (stress-ng-vm) total-vm:921512kB, anon-rss:715568kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1496kB oom_score_adj:1000
+Nov 18 13:23:08 localhost kernel: vmtoolsd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:23:08 localhost kernel: CPU: 0 UID: 0 PID: 1160 Comm: vmtoolsd Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:08 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:08 localhost kernel: Call Trace:
+Nov 18 13:23:08 localhost kernel:  <TASK>
+Nov 18 13:23:08 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:08 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:08 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:08 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:08 localhost kernel: [   4083]  1000  4083   230378   169612   169465      130        17  1454080        0          1000 stress-ng-vm
+Nov 18 13:23:08 localhost kernel: [   4086]  1000  4086     4413     1062      316      746         0    73728        0             0 sleep
+Nov 18 13:23:08 localhost kernel: [   4088]  1000  4088   230378   144164   144017      130        17  1253376        0          1000 stress-ng-vm
+Nov 18 13:23:08 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4083,uid=1000
+Nov 18 13:23:08 localhost kernel: Out of memory: Killed process 4083 (stress-ng-vm) total-vm:921512kB, anon-rss:677860kB, file-rss:520kB, shmem-rss:68kB, UID:1000 pgtables:1420kB oom_score_adj:1000
+Nov 18 13:23:10 localhost kernel: gmain invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+Nov 18 13:23:10 localhost kernel: CPU: 1 UID: 988 PID: 1368 Comm: gmain Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy)
+Nov 18 13:23:10 localhost kernel: Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 02/17/2026
+Nov 18 13:23:10 localhost kernel: Call Trace:
+Nov 18 13:23:10 localhost kernel:  <TASK>
+Nov 18 13:23:10 localhost kernel:  show_stack+0x49/0x60
+Nov 18 13:23:10 localhost kernel:  dump_stack_lvl+0x5f/0x90
+Nov 18 13:23:10 localhost kernel:  dump_stack+0x10/0x18
+Nov 18 13:23:10 localhost kernel:  dump_header+0x48/0x1c7
+--
+Nov 18 13:23:10 localhost kernel: [   4086]  1000  4086     4413     1062      316      746         0    73728        0             0 sleep
+Nov 18 13:23:10 localhost kernel: [   4088]  1000  4088   230378    97855    97707      130        18   884736        0          1000 stress-ng-vm
+Nov 18 13:23:10 localhost kernel: [   4089]  1000  4089   230378   215760   215612      130        18  1822720        0          1000 stress-ng-vm
+Nov 18 13:23:10 localhost kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-4.scope,task=stress-ng-vm,pid=4089,uid=1000
+Nov 18 13:23:10 localhost kernel: Out of memory: Killed process 4089 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
+Nov 18 13:23:48 localhost kernel: workqueue: psi_avgs_work hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+Nov 18 13:32:44 localhost kernel: Adding 2093052k swap on /swap.img.  Priority:-1 extents:5 across:2338812k

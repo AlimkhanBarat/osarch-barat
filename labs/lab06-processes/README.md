@@ -35,10 +35,8 @@ stress-ng --vm 2 --vm-bytes 400% --timeout 90s
 sudo swapoff -a
 stress-ng --vm 2 --vm-bytes 90% --timeout 60s
 sudo swapon -a
-```
 
 | | Before | During (worst) | After |
-
 | Available |1.1Gi |24Mi |1.1Gi |
 | Swap used |0B |1.4Gi (peak) / 0B (when forced) |0B|
 What happened: As the load increased, the system started relying heavily on Swap (reaching over 1.4Gi). Terminal responsiveness degraded severely (heavy input lag and freezing), and stress-ng even reported metrics-check: all bogo-op counters are zero, indicating severe thrashing. However, because the host SSD (NVMe) was extremely fast, the swap absorbed the pressure even at 400% allocation. To demonstrate the OOM killer, we temporarily disabled the swap (sudo swapoff -a). Available memory instantly plummeted to 24Mi at 13:22:10, and the kernel forcibly killed the process.

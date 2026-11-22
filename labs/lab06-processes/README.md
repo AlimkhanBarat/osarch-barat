@@ -21,9 +21,10 @@ Process chosen: `vmtoolsd.exe` (user-session instance, PID 4336 on Windows) / `v
 2. **Default "Memory" Column Definition:** Task Manager's default `Memory (private working set)` column reports only physical RAM private to the process (`1,492 K`), excluding shared DLLs. Process Explorer's `Working Set` (`28,188 K`) and `htop`'s `RES` (`11,380 K`) include shared libraries mapped into physical RAM, so the figures measure different things even for the same process.
 3. **Committed Memory vs. Virtual Address Space:** Task Manager's `Commit size` (`5,520 K`) corresponds to Process Explorer's `Private Bytes` (`6,352 K`) - the private virtual memory backed by RAM or the page file. `htop` has no direct equivalent column; instead it reports `VIRT` (`111 M`), which represents the entire mapped virtual address space (including shared libraries and reserved regions) and is much larger than actual physical RAM usage (`RES: 11,380 K`).
 
-## Part 2 - Memory pressure
-Guest RAM: 1.6 GiB (VM settings reduced to 2 GB) · swap: 2.0 GiB
-Steps: 
+## Part 2 — Memory pressure
+Guest RAM: 1.6 GiB usable (VM settings reduced to 2 GB) · swap: 2.0 GiB
+
+Steps:
 ```bash
 stress-ng --vm 2 --vm-bytes 70% --timeout 60s
 stress-ng --vm 2 --vm-bytes 90% --timeout 60s
@@ -31,7 +32,7 @@ stress-ng --vm 2 --vm-bytes 120% --timeout 90s
 stress-ng --vm 2 --vm-bytes 150% --timeout 90s
 stress-ng --vm 2 --vm-bytes 200% --timeout 90s
 stress-ng --vm 2 --vm-bytes 400% --timeout 90s
-# System survived due to fast NVMe swap. Forced OOM by disabling swap:
+# Triggered immediate OOM without swap buffer:
 sudo swapoff -a
 stress-ng --vm 2 --vm-bytes 90% --timeout 60s
 sudo swapon -a
@@ -39,15 +40,27 @@ sudo swapon -a
 
 | | Before | During (worst) | After |
 |---|---|---|---|
-| Available |1.1Gi |24Mi |1.1Gi |
-| Swap used |0B |1.4Gi (peak) / 0B (when forced) |0B|
+| Available |1.1Gi |4.0Mi |1.1Gi |
+| Swap used |0B |2.0Gi |0B|
 
-What happened: As the load increased, the system started relying heavily on Swap (reaching over 1.4Gi). Terminal responsiveness degraded severely (heavy input lag and freezing), and stress-ng even reported metrics-check: all bogo-op counters are zero, indicating severe thrashing. However, because the host SSD (NVMe) was extremely fast, the swap absorbed the pressure even at 400% allocation. To demonstrate the OOM killer, we temporarily disabled the swap (sudo swapoff -a). Available memory instantly plummeted to 24Mi at 13:22:10, and the kernel forcibly killed the process.
+What happened:
+
+12:59:52: First notable swap activity (219Mi used) during the initial stress runs, while available stayed above 570Mi.
+
+13:05:06 - 13:09:02: Under heavier pressure (150%-200%), available dropped close to zero (7.6Mi at 13:05:53 and an overall low of 4.0Mi at 13:08:53), while swap grew steadily to 1.4Gi. Terminal responsiveness degraded severely (heavy input lag and freezing), and stress-ng reported metrics-check: all bogo-op counters are zero, indicating severe thrashing.
+
+13:11:22 - 13:12:34: At 400%, swap reached 2.0Gi (only 3.4Mi free at 13:11:22). With both RAM and swap exhausted, the kernel invoked the OOM killer five times (13:11:23 to 13:12:34), terminating stress-ng-vm workers while the parent stress-ng process kept respawning them until the timeout expired.
+
+13:15:49 & 13:22:10 - 13:23:10: After disabling swap (sudo swapoff -a completed by 13:15:49), running stress-ng --vm 2 --vm-bytes 90% caused available to plunge to 24Mi at 13:22:10. Without swap to absorb pages, the kernel began killing stress-ng-vm workers almost every second until the run ended. After sudo swapon -a (13:32:44), memory returned to baseline (1.1Gi available, 0B swap used).
 
 ### What the kernel did
+First OOM kill (when 2.0 GiB swap hit 100% at 13:11:22):
+Nov 18 13:11:23 localhost kernel: Out of memory: Killed process 3115 (stress-ng-vm) total-vm:2508900kB, anon-rss:720008kB, file-rss:520kB, shmem-rss:0kB, UID:1000 pgtables:3348kB oom_score_adj:1000
+
+First OOM kill after disabling swap (matching the 24Mi available drop at 13:22:10):
 Nov 18 13:22:10 localhost kernel: Out of memory: Killed process 3902 (stress-ng-vm) total-vm:921512kB, anon-rss:862448kB, file-rss:520kB, shmem-rss:72kB, UID:1000 pgtables:1780kB oom_score_adj:1000
 
-At exactly 13:22:10 (which perfectly matches the 24Mi available memory drop in our monitoring log), the kernel ran completely out of memory and invoked the OOM-killer. It targeted and killed the stress-ng-vm child process (PID 3902) because it was the most memory-hungry task (consuming ~862MB of anonymous memory, anon-rss:862448kB). The kernel sacrificed this process to free up pages and prevent a complete system crash.
+At 13:11:23 (immediately after memory-pressure.txt recorded 2.0Gi swap used and 22Mi available at 13:11:22), the kernel exhausted both physical RAM and swap and killed stress-ng-vm (PID 3115, anon-rss: 720008kB). Later, with swap disabled, the same happened immediately at 13:22:10 (matching the 24Mi available drop in memory-pressure.txt), killing PID 3902 (anon-rss: 862448kB). In every case, the kernel chose stress-ng-vm workers because they held the largest share of anonymous physical memory and carried oom_score_adj: 1000 (maximum OOM priority), sparing system daemons like vmtoolsd (oom_score_adj: 0) and systemd-journal (oom_score_adj: -250).
 
 ### Windows
 Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5 | Format-List TimeCreated, Id, Message
@@ -59,10 +72,10 @@ At line:1 char:1
     + CategoryInfo          : ObjectNotFound: (:) [Get-WinEvent], Exception
     + FullyQualifiedErrorId : NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand
 
-Explanation: The query returned no events because the Windows VM has not experienced critical memory pressure yet. Unlike Linux, which uses the OOM Killer to aggressively terminate processes when memory runs out, Windows uses the Resource-Exhaustion-Detector (Event ID 2004) to log a warning containing the names of the top memory-consuming processes. It then starts denying new memory allocations (allocations fail) rather than arbitrarily killing running apps.
+Explanation: The query returned no events because the Windows VM has not experienced critical memory exhaustion. Unlike Linux, which uses the OOM killer to terminate high-scoring processes when memory runs out, Windows uses the Resource-Exhaustion-Detector to write Event ID 2004 to the System log - naming the top memory-consuming processes - and then denies new memory allocations rather than automatically killing running applications.
 
 ## What did not work the first time
-The memory pressure experiment in Ubuntu did not trigger the OOM killer at first, even when allocating 400% of memory. I saw all bogo-op counters are zero which meant the system was thrashing, but it survived because the host's fast NVMe SSD allowed the 2GB Swap to absorb the load. To fix this and force the kernel to react, I temporarily disabled the swap using sudo swapoff -a, which immediately triggered the OOM killer as expected.
+At lower stress levels (70% through 200%), the experiment did not trigger the OOM killer at all: the host's fast NVMe SSD allowed the 2.0 GiB swap file to absorb the pressure, causing severe thrashing without killing the workload. Even at 400%, because the parent stress-ng process automatically respawns killed workers, it initially looked as if the process survived until checking journalctl -k revealed five OOM kills once swap reached 2.0Gi. To observe immediate, unambiguous OOM-killer behavior without swap buffering, I temporarily disabled swap with sudo swapoff -a and re-ran the 90% load, then re-enabled swap with sudo swapon -a.
 
 ## Evidence
 [evidence/task-manager.png](evidence/task-manager.png) - Task Manager details for vmtoolsd.exe

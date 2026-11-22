@@ -69,7 +69,7 @@ The memory pressure experiment in Ubuntu did not trigger the OOM killer at first
 
 [evidence/process-explorer.png](evidence/process-explorer.png) - Process Explorer showing parent process, handles, and memory columns
 
-[evidence/htop.png](evidence/htop.png) - htop showing tree view, PPID, and RES/VIRT for vmtoolsd
+[evidence/htop.png](evidence/htop.png) - htop showing PID, PPID, and RES/VIRT for vmtoolsd
 
 [evidence/memory-pressure.txt](evidence/memory-pressure.txt) - Record of free -h before, during, and after memory pressure
 

@@ -64,13 +64,19 @@ At 13:11:23 (immediately after memory-pressure.txt recorded 2.0Gi swap used and 
 
 ### Windows
 Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5 | Format-List TimeCreated, Id, Message
+### Windows
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Microsoft-Windows-Resource-Exhaustion-Detector'} -MaxEvents 5 | Format-List TimeCreated, Id, Message
+```
 
+```text
 Get-WinEvent : No events were found that match the specified selection criteria.
 At line:1 char:1
 + Get-WinEvent -FilterHashtable @{LogName='System'; ProviderName='Micro ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : ObjectNotFound: (:) [Get-WinEvent], Exception
     + FullyQualifiedErrorId : NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand
+```
 
 Explanation: The query returned no events because the Windows VM has not experienced critical memory exhaustion. Unlike Linux, which uses the OOM killer to terminate high-scoring processes when memory runs out, Windows uses the Resource-Exhaustion-Detector to write Event ID 2004 to the System log - naming the top memory-consuming processes - and then denies new memory allocations rather than automatically killing running applications.
 

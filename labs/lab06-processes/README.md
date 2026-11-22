@@ -2,24 +2,24 @@
 
 Pair: Barat Alimkhan / Solo · Date: 18.11.2026 · Guests: Ubuntu Server 26.04.1 (2 GB RAM) / Windows 11 Enterprise (4 GB RAM)
 
-## Part 1 - One process, three tools
-Process chosen: `vmtoolsd.exe` / `vmtoolsd` (VMware Tools) - why: Since I am using VMware Workstation Pro, vmtoolsd is the direct equivalent of the VBoxService. It runs in the background on both the Windows and Ubuntu guests.
+## Part 1 — One process, three tools
+Process chosen: `vmtoolsd.exe` (user-session instance, PID 4336 on Windows) / `vmtoolsd` (PID 15494 on Ubuntu) - why: Since I am using VMware Workstation Pro, `vmtoolsd` is the direct equivalent of `VBoxService` and runs in the background on both guests. (Note: Windows runs two `vmtoolsd.exe` instances; the table below compares the user-session instance PID `4336`, visible directly below PID `3508` in `task-manager.png` and selected with its handles pane open in `process-explorer.png`.)
 
 | | Task Manager | Process Explorer | htop / ps |
 |---|---|---|---|
-| **PID** | 3508 | 3508 | 15494 |
-| **Parent (name and PID)** | - (not shown) | services.exe | systemd (1) |
-| **"Memory" as shown by default** | 3,004 K | 23,900 K | 11380 (RES) |
-| **Private memory** | 3,004 K | 10,412 K | - (htop doesn't isolate private memory directly) |
-| **Working set / RES** | 23,800 K | 23,900 K | 11380 K |
-| **Virtual size** | 10,408 K | 2,151,818,312 K | 111 M (114040 K) |
-| **Handles / file descriptors** | 399 | 399 | 9 |
-| **Threads** | 14 | 14 | 4 |
+| **PID** | 4336 | 4336 | 15494 |
+| **Parent (name and PID)** | - (not shown) | explorer.exe (5840) | systemd (1) |
+| **"Memory" as shown by default** | 1,492 K (Private WS) | 28,188 K (Working Set) | 11,380 K (RES) |
+| **Private memory** | 1,492 K (Private WS) / 5,520 K (Commit size) | 1,984 K (WS Private) / 6,352 K (Private Bytes) | - (htop does not isolate private memory directly) |
+| **Working set / RES** | 22,712 K | 28,188 K | 11,380 K |
+| **Virtual size** | - (not shown in Task Manager) | - (column not enabled) | 111 M |
+| **Handles / file descriptors** | 280 | 288 | 9 |
+| **Threads** | 4 | 4 | 4 |
 
 ### Where the tools disagree
-1. **Parent Process Visibility:** Task Manager does not show the parent process (PPID) by default, grouping processes by application instead. Process Explorer and `htop` display the process tree, clearly showing the parent.
-2. **Memory Terminology and Measurement:** Task Manager's default "Memory" column actually shows the "Private working set" (memory that cannot be shared with other processes, here 3,004 K). Process Explorer's default "Working Set" shows total physical memory mapped (23,900 K). `htop` shows "RES" (Resident Set Size, 11380 K), which includes shared libraries. They display different numbers because they measure fundamentally different concepts of memory usage.
-3. **Virtual Size Discrepancy:** In Windows, Task Manager's "Commit size" (10,408 K) roughly corresponds to Process Explorer's "Private Bytes" (10,412 K). However, Process Explorer's "Virtual Size" shows a massive 2+ TB (2,151,818,312 K) because it maps the entire 64-bit theoretical address space, whereas `htop` displays "VIRT" (111 M), which maps the allocated address space including shared libraries.
+1. **Parent Process Visibility:** Task Manager does not display the parent process (PPID) on the Details tab, whereas Process Explorer shows the full process tree (`explorer.exe`, PID `5840`) and `htop` exposes the `PPID` column (`1`, `systemd`).
+2. **Default "Memory" Column Definition:** Task Manager's default `Memory (private working set)` column reports only physical RAM private to the process (`1,492 K`), excluding shared DLLs. Process Explorer's `Working Set` (`28,188 K`) and `htop`'s `RES` (`11,380 K`) include shared libraries mapped into physical RAM, so the figures measure different things even for the same process.
+3. **Committed Memory vs. Virtual Address Space:** Task Manager's `Commit size` (`5,520 K`) corresponds to Process Explorer's `Private Bytes` (`6,352 K`) - the private virtual memory backed by RAM or the page file. `htop` has no direct equivalent column; instead it reports `VIRT` (`111 M`), which represents the entire mapped virtual address space (including shared libraries and reserved regions) and is much larger than actual physical RAM usage (`RES: 11,380 K`).
 
 ## Part 2 - Memory pressure
 Guest RAM: 1.6 GiB (VM settings reduced to 2 GB) · swap: 2.0 GiB

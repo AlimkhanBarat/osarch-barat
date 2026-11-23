@@ -1,28 +1,26 @@
-# Lab 4 - Partition, mirror, fail, recover
+# Lab 4 — Partition, mirror, fail, recover
 
-Pair: Barat Alimkhan (Solo) - Date: 13.11.2026 - Hypervisor: VMware Workstation Pro
+Pair: Barat Alimkhan (Solo) · Date: 23.11.2026 · Hypervisor: VMware Workstation Pro
 
 ## Windows
 
 ```powershell
 Get-Disk | Select Number, FriendlyName, PartitionStyle, Size
 ```
-```text
+``` text
 Number FriendlyName             PartitionStyle Size
 ------ ------------             -------------- ----
      0 VMware Virtual NVMe Disk GPT            68719476736
      1 VMware Virtual NVMe Disk GPT            1073741824
 ```
-
-```powershell
+``` powershell
 Get-Volume | Where FileSystemLabel -eq 'LAB04'
 ```
-```text
+``` text
 DriveLetter FileSystemLabel FileSystemType DriveType SizeRemaining Size
 ----------- --------------- -------------- --------- ------------- ----
 D           LAB04           NTFS           Fixed     994111488     1056894976
 ```
-
 MBR or GPT: I chose GPT because Windows 11 boots with UEFI, which requires a GPT partition style. Furthermore, GPT provides better reliability by maintaining a backup copy of the partition table at the end of the disk and calculating checksums for data integrity.
 
 ## Linux - layout before and after
